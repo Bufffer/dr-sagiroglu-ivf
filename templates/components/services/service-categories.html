@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load services %}
+
+{% get_services as services %}
+<div class="rr-services-details-list">
+    <span>{% translate 'Service Categories' %}</span>
+    <ul>
+        <li>
+            {% for service in services %}
+            <a href="{{ service.get_absolute_url }}">
+                <i class="fa-solid fa-check"></i> {{ service.title }}
+            </a>
+            {% endfor %}
+        </li>
+    </ul>
+</div>

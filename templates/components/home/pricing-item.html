@@ -1,0 +1,29 @@
+{% load static %}
+{% load i18n %}
+
+<div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+    <div class="rr-price-2-item p-relative {% if plan.is_special %}active{% endif %}">
+        <div class="rr-price-2-top">
+            <span>{{ plan.name }}</span>
+        </div>
+        <div class="rr-price-2-list">
+            <ul>
+                {% for feature in plan.features.all %}
+                    <li>
+                        {% if feature.is_checked %}
+                            <i class="fa-sharp fa-regular fa-circle-check"></i>
+                        {% else %}
+                            <i class="fa-regular fa-xmark"></i>
+                        {% endif %}
+                        {{ feature.name }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a class="rr-btn-2" href="{{ plan.get_absolute_url }}">
+            <span>{% translate 'GET PRICE' %}
+                <i class="fa-sharp fa-solid fa-plus"></i>
+            </span>
+        </a>
+    </div>
+</div>

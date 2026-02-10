@@ -1,0 +1,55 @@
+{% load static %}
+{% load i18n %}
+
+<!-- contact area start -->
+<section class="rr-contact-area mt-50 mb-50">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="rr-about-wrapper wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                    <div class="rr-price-2-title-box text-left mb-10">
+                        <span class="rr-section-subtitle p-relative">
+                            <img src="{% static 'img/icons/section-icon.png' %}" alt="img">
+                            {% translate 'ABOUT US' %}
+                        </span>
+                        <h4 class="rr-section-title  rr-section-title-space">
+                            {% translate 'We are with you from the beginning to the end of your IVF Journey!' %}
+                        </h4>
+                    </div>
+                    <p>
+                        {% blocktranslate trimmed %}
+                           It might be as simple as not being sure how long the first appointment will take, whether it’s ok for you to bring along a partner or a friend, or how much of a financial commitment you’ll need to make up front. If you’re considering fertility treatment then you’ll have a lot of questions – ranging from weighing up whether it’s the right option for you at all, through to wondering how easy it will be to navigate the logistics of the treatment process, and each one is valid.
+                        {% endblocktranslate %}
+                    </p>
+                    <p>
+                        {% blocktranslate trimmed %}
+                            Because we know this can be an emotional time, we do our best to put you in control and give you all the information you need at every stage.
+                        {% endblocktranslate %}
+                    </p>
+                    <p>
+                        {% blocktranslate trimmed %}
+                          Here, we’re going to walk through what you can expect from the first time you contact us, to the end of your treatment.
+                        {% endblocktranslate %}
+                    </p>
+
+                    <div class="rr-about-btn">
+                        <a class="rr-btn-1" href="{% url 'about' %}">
+                            <span>{% translate 'Read More' %}
+                                <i class="fa-sharp fa-solid fa-plus"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                 data-wow-delay=".9s">
+                <div class="rr-contact-form">
+                    <div class="rr-contact-form-box text-center">
+                        {% include 'components/forms/home_contact_form.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact area end -->s

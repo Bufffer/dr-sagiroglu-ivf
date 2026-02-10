@@ -1,0 +1,59 @@
+{% load i18n %}
+{% load static %}
+
+{% if faqs %}
+<!-- faq area start -->
+<div class="rr-faq-area p-relative fix pt-80 pb-80 {% if bg_grey %}grey-bg{% endif %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 wow rrfadeLeft" data-wow-duration=".9s" data-wow-delay=".7s">
+                <div class="rr-faq-left z-index-3">
+                    <div class="rr-faq-title-box pb-25">
+                        {% if obj.faq_subtitle %}
+                        <span class="rr-section-subtitle">
+                            {% static 'img/icons/section-icon.png' as section_icon %}
+                            <img src="{{section_icon}}" alt="img">
+                            {{obj.faq_subtitle}}
+                        </span>
+                        {% endif %}
+                        {% if obj.faq_title %}
+                        <h4 class="rr-section-title  rr-section-title-space">
+                            {{obj.faq_title}}
+                        </h4>
+                        {% endif %}
+
+                        <p>
+                            {{obj.faq_description|default_if_none:""|linebreaksbr}}
+                        </p>
+
+                    </div>
+                    <div class="rr-faq-wrap">
+                        <div class="rr-custom-accordion">
+                            <div class="accordion" id="accordionFAQ">
+                                {% for faq in faqs %}
+                                <div class="accordion-items {% if forloop.first %}rr-faq-active{% endif %}">
+                                    <h2 class="accordion-header" id="heading-{{faq.pk}}">
+                                        <button class="accordion-buttons {% if not forloop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapse-{{faq.pk}}" aria-expanded="true"
+                                            aria-controls="collapse-{{faq.pk}}">
+                                            <i class="fa-solid fa-check"></i> {{faq.question}}
+                                        </button>
+                                    </h2>
+                                    <div id="collapse-{{faq.pk}}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}"
+                                        aria-labelledby="heading-{{faq.pk}}" data-bs-parent="#accordionFAQ">
+                                        <div class="accordion-body">
+                                            {{faq.answer|safe|default_if_none:""}}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endif %}

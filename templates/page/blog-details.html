@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load blogs %}
+
+{% block meta %}
+    {% include "components/base/meta.html" with obj=blog %}
+{% endblock %}
+
+{% block banner %}
+    {% include "components/banner.html" with obj=blog %}
+{% endblock %}
+
+
+{% block content %}
+    <section class="postbox__area pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-8 col-xl-8 col-lg-8">
+                    <div class="postbox__wrapper">
+                        <article class="postbox__item format-image mb-50 transition-3">
+                            {% if blog.image %}
+                                <div class="postbox__thumb w-img mb-25">
+                                    <a href="{{ blog.get_absolute_url }}">
+                                        <img src="{{ blog.image.url }}" alt="img">
+                                    </a>
+                                </div>
+                            {% endif %}
+                            <div class="postbox__content mr-70">
+                                <div class="postbox__meta mb-20">
+                                    <a href="{{ blog.category.get_absolute_url }}">
+                                        <span>
+                                            <i class="fa-regular fa-location-dot"></i> {{ blog.category.title }}
+                                        </span>
+                                    </a>
+                                </div>
+                                <h3 class="postbox__title mb-10">
+                                    {{ blog.title }}
+                                </h3>
+                                <div class="postbox__text pb-10">
+                                    {{ blog.content|safe|default_if_none:"" }}
+                                </div>
+                            </div>
+                        </article>
+
+                        {% include 'components/forms/first-step-form.html' %}
+                    </div>
+                </div>
+                <div class="col-xxl-4 col-xl-4 col-lg-4">
+                    <div class="sidebar__wrapper">
+                        {% include 'components/blog/search-widget.html' %}
+
+                        {% include 'components/blog/blog-categories.html' %}
+
+                        {% include 'components/blog/recent-items.html' %}
+
+                    </div>
+                </div>
+            </div>
+            {% include "components/faqs.html" with faqs=blog.faq_set.all obj=blog %}
+        </div>
+    </section>
+
+{% endblock %}

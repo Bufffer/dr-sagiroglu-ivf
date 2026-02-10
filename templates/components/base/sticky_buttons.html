@@ -1,0 +1,12 @@
+{% load i18n %}
+
+<div class="sticky-button-container">
+    <a id="whatsapp-btn" href="{{ global_preferences.page__whatsapp_link }}" title="Whatsapp"
+       class="sticky-button sticky-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a id="phone-btn" href="tel:{{ global_preferences.page__phone_number|cut:' ' }}" title="Phone"
+       class="sticky-button sticky-phone" target="_blank">
+        <i class="fa fa-phone"></i>
+    </a>
+</div>

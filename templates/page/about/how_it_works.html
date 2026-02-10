@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load about %}
+
+{% block meta %}
+    {% get_howitworks_seo_obj as obj %}
+    {% include "components/base/meta.html" %}
+{% endblock %}
+
+{% block banner %}
+    {% get_howitworks_seo_obj as obj %}
+    {% include "components/banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+    {% get_howitworks_seo_obj as about %}
+
+    {% include "components/about/how_it_works_content.html" %}
+
+    {% include "components/faqs.html" with faqs=about.faq_set.all bg_grey=True obj=about %}
+    
+    {# TODO: Services sections eklenecek... #}
+
+    {% include 'components/home/pricing.html' %}
+
+    {% include 'components/about/contact_area.html' %}
+
+    {% include 'components/about/team_area.html' %}
+
+{% endblock %}

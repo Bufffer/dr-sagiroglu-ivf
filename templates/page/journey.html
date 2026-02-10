@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load journey %}
+
+{% block meta %}
+    {% get_journey_seo_obj as obj %}
+    {% include "components/base/meta.html" %}
+{% endblock %}
+
+{% block banner %}
+    {% get_journey_seo_obj as obj %}
+    {% include "components/banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+    <!-- service details area start -->
+    <section class="rr-services-details-area pt-100 pb-80">
+        <div class="container">
+            <div class="row mb-40">
+                <div class="col-12 col-md-8">
+                    {% if journey.image %}
+                        <div class="mb-50">
+                            <div class="rr-services-details-thumb">
+                                <img src="{{ journey.image.url }}" alt="img">
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="rr-service-details-info mt-20 mb-50">
+                        <h4>{{ journey.title }}</h4>
+                        {{ journey.content|safe|default_if_none:"" }}
+                    </div>
+                    {% include 'components/forms/first-step-form.html' %}
+                </div>
+                <div class="col-12 col-md-4">
+                    {% include 'components/journey/journey-items.html' %}
+                    
+                    {% include 'components/services/patient-comments.html' %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/home/pricing.html' with apply_negative_margin=True %}
+{% endblock %}

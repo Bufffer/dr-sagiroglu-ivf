@@ -1,0 +1,38 @@
+{% load static i18n %}
+
+<div class="breadcrumb__area {% if obj.banner_overlay %}breadcrumb__overlay{% endif %} breadcrumb__height fix p-relative"
+        {% if obj.banner_image %}
+     data-background="{{ obj.banner_image.url }}"
+        {% endif %}
+>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="breadcrumb__content mt-0 z-index">
+                    <div class="breadcrumb__section-title-box">
+                        <h3 class="breadcrumb__title">
+                            {{ obj.banner_title|default_if_none:"" }}
+                        </h3>
+                    </div>
+                    <div class="breadcrumb__list my-3">
+                        <span><a href="{% url 'home' %}">{% translate 'Home' %}</a></span>
+                        {% if prev_page %}
+                            <span class="dvdr"><i>/</i></span>
+                            <span><a href="{{ prev_page_url }}">{{ prev_page }}</a></span>
+                        {% endif %}
+                        <span class="dvdr"><i>/</i></span>
+                        <span>{{ obj.banner_title|default_if_none:"" }}</span>
+                    </div>
+                    <div class="breadcrumb__text">
+                        {{ obj.banner_description|default_if_none:""|safe }}
+                    </div>
+                    <a class="rr-btn-1" href="{% url 'contact' %}">
+                        <span>{% translate 'CONTACT NOW' %}
+                            <i class="fa-sharp fa-solid fa-plus"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+{% load i18n %}
+{% load blogs %}
+
+
+<div class="sidebar__widget sidebar__widget-bg mb-30">
+    <h3 class="sidebar__widget-title">{% translate 'Recent Post' %}</h3>
+    <div class="sidebar__widget-content">
+        <div class="sidebar__post">
+
+            {% get_blogs recent=True limit=3 as recent_items %}
+            {% for recent_item in recent_items %}
+                <div class="rc__post mb-25 d-flex align-items-center">
+                    {% if recent_item.image %}
+                        <div class="rc__post-thumb mr-20">
+                            <a href="{{ recent_item.get_absolute_url }}">
+                                <img src="{{ recent_item.image.url }}"
+                                     alt="img" width="100">
+                            </a>
+                        </div>
+                    {% endif %}
+                    <div class="rc__post-content">
+                        <h3 class="rc__post-title">
+                            <a href="{{ recent_item.get_absolute_url }}">{{ recent_item.title }}</a>
+                        </h3>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>

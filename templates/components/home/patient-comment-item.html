@@ -1,0 +1,36 @@
+{% load static %}
+{% load i18n %}
+
+<div class="swiper-slide wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+    <div class="rr-testimonial-item p-relative">
+        <div class="rr-testimonial-shap">
+            <img src="{% static 'img/icons/testimonial-icon.png' %}" alt="img">
+        </div>
+        <div class="rr-testimonial-quote">
+            <i class="fa-solid fa-quote-right"></i>
+        </div>
+        <div class="quote-border"></div>
+        <div class="rr-testimonial-text mb-25">
+            <p>{{ comment.comment|default_if_none:""|linebreaksbr }}</p>
+        </div>
+        <div class="rr-testimonial-author-box">
+            <div class="rr-testimonial-author-info">
+                <h5>{{ comment.name }}</h5>
+                <span>{{ comment.role|default_if_none:"" }}</span>
+            </div>
+        </div>
+        <div class="rr-testimonial-star text-end">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+        </div>
+        {% if comment.image %}
+        <div class="rr-testimonial-author-thumb">
+            <img src="{{ comment.image.url }}" alt="img">
+        </div>
+        {% endif %}
+    </div>
+</div>

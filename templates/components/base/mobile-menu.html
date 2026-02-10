@@ -1,0 +1,53 @@
+{% load static %}
+{% load i18n %}
+
+<!-- rr-offcanvus-area-start -->
+<div class="rroffcanvas-area">
+    <div class="rroffcanvas">
+        <div class="rroffcanvas__close-btn">
+            <button class="close-btn"><i class="fal fa-times"></i></button>
+        </div>
+        <div class="rroffcanvas__logo">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo/logo-black.png' %}" alt="img">
+            </a>
+        </div>
+        <div class="rr-main-menu-mobile d-xl-none"></div>
+        <div class="rroffcanvas__contact-info">
+            <div class="rroffcanvas__contact-title">
+                <h5>{% translate 'Contact us' %}</h5>
+            </div>
+            <ul>
+                <li>
+                    <i class="fa-light fa-location-dot"></i>
+                    <a href="{{ global_preferences.page__address_map_link }}" target="_blank">
+                        {{ global_preferences.page__address }}
+                    </a>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:{{ global_preferences.page__email_address }}">{{ global_preferences.page__email_address }}</a>
+                </li>
+                <li>
+                    <i class="fal fa-phone-alt"></i>
+                    <a href="tel:{{ global_preferences.page__phone_number|cut:' ' }}">{{ global_preferences.page__phone_number }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="rroffcanvas__social">
+            <div class="social-icon">
+                <a href="{{ global_preferences.page__twitter_link }}">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="{{ global_preferences.page__instagram_link }}">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="{{ global_preferences.page__facebook_link }}">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="body-overlay"></div>
+<!-- rr-offcanvus-area-end -->

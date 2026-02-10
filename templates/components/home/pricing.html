@@ -1,0 +1,32 @@
+{% load static %}
+{% load i18n %}
+{% load pricing %}
+
+<!-- price area start -->
+<div class="rr-price-2-area pb-70 pt-80 grey-bg"
+        {% if apply_negative_margin %}
+     style="margin-bottom: -75px"
+        {% endif %}>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="rr-price-2-title-box text-center mb-45">
+                     <span class="rr-section-subtitle p-relative">
+                         {% static 'img/icons/section-icon.png' as section_icon %}
+                            <img src="{{ section_icon }}" alt="img">
+                         {% translate 'CREATE YOUR PLAN NOW' %}
+                            <img src="{{ section_icon }}" alt="img">
+                     </span>
+                    <h4 class="rr-section-title rr-section-title-space">
+                        {% translate 'Which treatment plan is best for you?' %}
+                    </h4>
+                </div>
+            </div>
+            {% get_pricing as pricing_plans %}
+            {% for plan in pricing_plans %}
+                {% include 'components/home/pricing-item.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- price area end -->

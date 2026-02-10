@@ -1,0 +1,26 @@
+{% load static i18n %}
+{% load services %}
+
+{% get_services in_about=in_about in_doctor=in_doctor as services %}
+<section class="rr-service-1-area pt-100 pb-100 fix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="rr-price-2-title-box text-center mb-20">
+                     <span class="rr-section-subtitle p-relative">
+                         {% static 'img/icons/section-icon.png' as section_icon %}
+                      <img src="{{ section_icon }}" alt="img">
+                         {% translate 'SERVICES' %} 
+                     <img src="{{ section_icon }}" alt="img">
+                     </span>
+                    <h4 class="rr-section-title">
+                        {% translate 'What can we help you with?' %}
+                    </h4>
+                </div>
+            </div>
+            {% for service in services %}
+            {% include 'components/services/service-item.html' %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

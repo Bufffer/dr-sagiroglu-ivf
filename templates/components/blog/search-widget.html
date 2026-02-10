@@ -1,0 +1,14 @@
+{% load i18n %}
+
+<div class="sidebar__widget mb-30">
+    <div class="sidebar__widget-content">
+        <div class="sidebar__search">
+            <form action="{% url 'blog_list' %}">
+                <div class="sidebar__search-input-2">
+                    <input name="search" type="text" placeholder="{% translate 'Search' %}....">
+                    <button type="submit"><i class="far fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

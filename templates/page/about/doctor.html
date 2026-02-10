@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load about %}
+
+{% block meta %}
+    {% get_about_doctor_seo_obj as obj %}
+    {% include "components/base/meta.html" %}
+{% endblock %}
+
+{% block banner %}
+    {% get_about_doctor_seo_obj as obj %}
+    {% include "components/banner.html" %}
+{% endblock %}
+
+{% block content %}
+    {% get_about_doctor_seo_obj as about %}
+    {% include 'components/about/about_section.html' %}
+
+    {% include "components/faqs.html" with faqs=about.faq_set.all bg_grey=True obj=about %}
+
+    {% include 'components/about/services_section.html' with in_doctor=True %}
+    
+    {% include 'components/about/call_area.html' %}
+    
+    {% include 'components/about/team_area.html' %}
+    
+{% endblock %}

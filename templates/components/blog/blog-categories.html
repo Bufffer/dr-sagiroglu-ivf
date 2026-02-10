@@ -1,0 +1,19 @@
+{% load i18n %}
+{% load blogs %}
+
+
+<div class="sidebar__widget sidebar__widget-bg mb-30">
+    <h3 class="sidebar__widget-title">{% translate "Catagories" %}</h3>
+    <div class="sidebar__widget-content">
+        <ul>
+            {% get_blog_categories as blog_categories %}
+            {% for blog_category in blog_categories %}
+                <li>
+                    <a href="{{ blog_category.get_absolute_url }}">
+                        <i class="fa-solid fa-right-long"></i> {{ blog_category.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load services %}
+
+
+{% block meta %}
+    {% get_services_seo_obj as obj %}
+    {% include "components/base/meta.html" %}
+{% endblock %}
+
+{% block banner %}
+    {% get_services_seo_obj as obj %}
+    {% include "components/banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+    <section class="rr-service-1-area pt-100 pb-100 fix">
+        <div class="container">
+            <div class="wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="rr-price-2-title-box text-center mb-20">
+                      <span class="rr-section-subtitle p-relative">
+                          {% static 'img/icons/section-icon.png' as section_icon %}
+                          <img src="{{ section_icon }}" alt="img">
+                          {% translate 'SERVICES' %}
+                          <img src="{{ section_icon }}" alt="img">
+                      </span>
+                    <h4 class="rr-section-title">
+                        {% translate 'Is there a specific issue you would like us to help you with?' %}
+                    </h4>
+                </div>
+            </div>
+            <div class="row">
+                {% for service in services %}
+                    {% include 'components/services/service-item.html' %}
+                {% endfor %}
+            </div>
+            {% include 'components/pagination.html' %}
+        </div>
+    </section>
+
+    {% include 'components/about/contact_area.html' with apply_negative_margin=True %}
+{% endblock %}

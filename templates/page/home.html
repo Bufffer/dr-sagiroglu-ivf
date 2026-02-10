@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static i18n %}
+{% load home_page %}
+
+{% block meta %}
+    {% get_home_obj as obj %}
+    {% include "components/base/meta.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+    {% include 'components/home/slider.html' %}
+
+    {% include 'components/home/about.html' %}
+
+    {% include 'components/home/ivf-services.html' %}
+
+    {% include 'components/home/ivf-journey.html' %}
+
+    {% include "components/about/how_it_works_content.html" %}
+
+    {% include 'components/home/patient-comments.html' %}
+
+    {% include 'components/home/pricing.html' %}
+    
+    {% include 'components/home/blog.html' %}
+
+{% endblock %}

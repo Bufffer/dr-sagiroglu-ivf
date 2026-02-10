@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load contact %}
+
+{% block meta %}
+{% get_contact_seo_obj as obj %}
+{% include "components/base/meta.html" %}
+{% endblock %}
+
+{% block banner %}
+{% get_contact_seo_obj as obj %}
+{% include "components/banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+<!-- contact info area start -->
+<section class="rr-contact-area pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <a href="tel:{{ global_preferences.page__phone_number|cut:' ' }}">
+                    <div class="rr-contat-box-info">
+                        <div class="rr-contact-box-item d-flex align-items-center p-relative">
+                            <div class="rr-contact-box-icon mr-20">
+                                <span><i class="fa-solid fa-phone"></i></span>
+                            </div>
+                            <div class="rr-contact-box-contat">
+                                <span>{% translate 'Call Now' %}</span>
+                                <p>
+                                    {{ global_preferences.page__phone_number }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                <a href="{{ global_preferences.page__address_map_link }}">
+                    <div class="rr-contat-box-info">
+                        <div class="rr-contact-box-item d-flex align-items-center p-relative">
+                            <div class="rr-contact-box-icon mr-20">
+                                <span><i class="fa-solid fa-location-dot"></i></span>
+                            </div>
+                            <div class="rr-contact-box-contat">
+                                <span>{% translate 'Address' %}</span>
+                                <p>
+                                    {{ global_preferences.page__address }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                <a href="mailto:{{ global_preferences.page__email_address }}">
+                    <div class="rr-contat-box-info">
+                        <div class="rr-contact-box-item d-flex align-items-center p-relative">
+                            <div class="rr-contact-box-icon mr-20">
+                                <span><i class="fa-sharp fa-solid fa-envelope"></i></span>
+                            </div>
+                            <div class="rr-contact-box-contat">
+                                <span>{% translate 'Email Us' %}</span>
+                                <p>
+                                    {{ global_preferences.page__email_address }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- contact info area end -->
+
+{% include 'components/about/contact_area.html' with apply_negative_margin=True %}
+
+{% endblock %}

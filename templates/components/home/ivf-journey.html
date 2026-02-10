@@ -1,0 +1,78 @@
+{% load static i18n %}
+{% load journey %}
+
+<section class="rr-service-area rr-service-height rr-service-wapp"
+    data-background="{% static 'img/backgrounds/shap-bg.png' %}">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="rr-price-2-title-box text-center mb-45">
+                    <div class="rr-video-title-box z-index-2">
+                        <span class="rr-video-subtitle p-relative">
+                            {% static 'img/icons/section-icon.png' as section_icon %}
+                            <img src="{{ section_icon }}" alt="img">
+                            {% translate 'IVF JOURNEY WITH US' %}
+                            {% static 'img/icons/section-icon.png' as section_icon %}
+                            <h4 class="rr-video-title">{% translate 'IVF Journey Step by Step' %}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rr-service-active swiper-container">
+            <div class="swiper-wrapper">
+                {% get_journey_items as journey_items %}
+                {% for journey_item in journey_items %}
+                <div class="swiper-slide wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                    <div class="rr-service-item fix mb-30">
+                        <div class="rr-service-content white-bg p-relative">
+                            <a href="{{ journey_item.get_absolute_url }}">
+                                <div class="rr-service-number">
+                                    <span></span>
+                                </div>
+                                <div class="rr-service-icon">
+                                    {{ forloop.counter }}
+                                </div>
+                            </a>
+                            <div class="rr-service-info ml-80">
+                                <h3 class="rr-service-title">
+                                    <a href="{{ journey_item.get_absolute_url }}">
+                                        {{ journey_item.title }}
+                                    </a>
+                                </h3>
+                            </div>
+                            <a href="{{ journey_item.get_absolute_url }}">
+                                <p>{{ journey_item.description|default_if_none:""|linebreaksbr}}</p>
+                            </a>
+                            <div class="d-flex">
+                                <div class="rr-btn-1 rr-btn-sml ms-auto">
+                                    <a href="{{ journey_item.get_absolute_url }}">
+                                        {% translate "Learn More" %}
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="{{ journey_item.get_absolute_url }}">
+                            {% if journey_item.image %}
+                            <div class="rr-service-thumb">
+                                <img class="w-100" src="{{ journey_item.image.url }}" alt="img">
+                            </div>
+                            {% endif %}
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="rr-main-swiper-dot text-center"></div>
+        </div>
+        <div class="gallery-slider-dots text-center">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</section>
+<!-- service area end -->

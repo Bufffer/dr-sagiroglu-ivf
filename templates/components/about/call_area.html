@@ -1,0 +1,35 @@
+{% load static %}
+{% load i18n %}
+
+<section class="rr-call-area rr-call-shap p-relative pt-35 pb-35 fix"
+         data-background="assets/img/contact/contact-bg.jpg">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-xl-8 col-lg-7 col-md-8 col-12">
+                <div class="rr-call-warap d-flex align-items-center z-index-2">
+                    <div class="rr-call-icon">
+                        <img src="{% static 'img/icons/call.png' %}" alt="img">
+                    </div>
+                    <div class="rr-call-info">
+                        <h3>{% translate 'For detailed information, you can contact us via WhatsApp.' %}</h3>
+                        <span>{% translate 'WhatsApp' %}:
+                            <a href="tel:{{ global_preferences.page__phone_number|cut:' ' }}">
+                                {{ global_preferences.page__phone_number }}
+                            </a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-5 col-md-4 col-12">
+                <div class="rr-call-btn text-end mt-10">
+                    <a class="rr-btn-white-2" href="{% url 'contact' %}">
+                        <span>
+                            {% translate 'Contact Us' %}
+                            <i class="fa-sharp fa-solid fa-plus"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- call area end -->

@@ -1,0 +1,9 @@
+.iti {
+    width: 100%;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+    background-color: transparent;
+    border-radius: 30% 0 0 30%;
+    height: 100% !important;
+}

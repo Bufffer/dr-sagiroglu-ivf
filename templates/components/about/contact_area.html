@@ -1,0 +1,28 @@
+{% load static %}
+{% load i18n %}
+
+<section class="rr-contact-area p-relative black-bg fix" id="contact_area"
+        {% if apply_negative_margin %}
+         style="margin-bottom: -75px"
+        {% endif %}
+>
+    <div class="rr-contact-shap">
+        <img src="{% static 'img/shapes/shap01.png' %}" alt="img">
+    </div>
+    <div class="rr-contact-img">
+        <img src="{% static 'img/contact-img.jpg' %}" alt="img">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-3 col-md-1"></div>
+            <div class="col-xl-4 col-lg-9 col-md-10">
+                <div class="rr-form-box text-center">
+                    {% include 'components/forms/home_contact_form.html' %}
+                </div>
+            </div>
+            <div class="col-xl-2 col-lg-10 col-md-1"></div>
+        </div>
+    </div>
+
+</section>
+<!-- contact area end -->

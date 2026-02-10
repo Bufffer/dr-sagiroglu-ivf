@@ -1,0 +1,21 @@
+<html>
+
+<body>
+    <p>
+        <b>Adı Soyadı:</b> {{ full_name }}
+    </p>
+    <p>
+        <b>Email:</b> {{ email }}
+    </p>
+    <p>
+        <b>Telefon:</b> {{ full_phone_number|default:phone }}
+    </p>
+    <p>
+        <b>Servis:</b> {{ service }}
+    </p>
+    <p>
+        <b>Mesaj:</b> {{ message }}
+    </p>
+</body>
+
+</html>

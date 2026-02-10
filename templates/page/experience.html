@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% load experience %}
+
+{% block meta %}
+{% get_experience_seo_obj as obj %}
+{% include "components/base/meta.html" %}
+{% endblock %}
+
+{% block banner %}
+{% get_experience_seo_obj as obj %}
+{% include "components/banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<!-- project area start -->
+<section class="rr-project-area-2 pt-100 pb-80 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="rr-project-title-wrapper ">
+                    <span class="rr-section-subtitle wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                        {% static 'img/icons/section-icon.png' as section_icon %}
+                        <img src="{{ section_icon }}" alt="img">
+                        {% translate 'IVF EXPERIENCE' %}
+                        <img src="{{ section_icon }}" alt="img">
+                    </span>
+                    <h3 class="rr-section-title wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                        {% translate 'Thank you for sharing your IVF Experience with us' %}
+                    </h3>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="rr-project-text wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                    <p>
+                        {% blocktranslate trimmed %}
+                        Every patient is put on the best possible treatment plan for the highest chance of success. That
+                        process starts with our thoughtful and thorough screening, which is focused on understanding you
+                        and your fertility health. “It’s how we make the impossible, possible.”
+                        {% endblocktranslate %}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="rr-project-tab-wrapper wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
+                    <ul class="nav nav-pills mb-50 justify-content-end " id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            {% url "experience" as experience_url %}
+                            <a href="{{ experience_url }}" class="nav-link {% if not category %}active{% endif %}"
+                                role="tab" aria-selected="false">
+                                {% translate 'All' %}
+                            </a>
+                        </li>
+                        {% get_experience_categories as categories %}
+                        {% for category_item in categories %}
+                        <li class="nav-item" role="presentation">
+                            <a href="{{ experience_url }}?category={{ category_item.slug }}"
+                                {% if category.slug == category_item.slug %} class="nav-link active" {% else %}
+                                class="nav-link" {% endif %} role="tab">{{ category_item.title }}
+                            </a>
+                        </li>
+                        {% endfor %}
+
+                    </ul>
+
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade active show" id="pills-House" role="tabpanel">
+                            <div class="row">
+                                {% for experience in experiences %}
+                                {% include 'components/experience/experience-item.html' %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- project area end -->
+
+{% include 'components/home/patient-comments.html' %}
+
+
+
+{% endblock %}

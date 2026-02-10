@@ -1,0 +1,14 @@
+{% load comments %}
+
+<div class="patient-comments-wrapper">
+    <div class="swiper-container rr-patient-comments-single">
+        <div class="swiper-wrapper">
+            {% get_patient_comments limit=10 as comments %}
+            {% for comment in comments %}
+                {% include 'components/home/patient-comment-item.html' %}
+            {% endfor %}
+        </div>
+        <div class="rr-main-swiper-dot text-center mt-20">
+        </div>
+    </div>
+</div>

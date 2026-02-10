@@ -1,0 +1,51 @@
+{% load static %}
+{% load i18n %}
+{% load home_page %}
+
+<div class="rr-slider-3-area black-bg-2">
+    <div class="rr-slider-3-wrapper p-relative">
+        <div class="rr-slider-3-arrow-box">
+            <button class="slider-next">
+                <i class="fa-sharp fa-solid fa-angle-left"></i>
+            </button>
+            <button class="slider-prev active">
+                <i class="fa-sharp fa-solid fa-angle-right"></i>
+            </button>
+        </div>
+        <div class="swiper-container rr-slider-3-active">
+            <div class="swiper-wrapper">
+                {% get_banner_slides as slides %}
+                {% for slide in slides %}
+                    <div class="swiper-slide fix ">
+                        <div class="rr-slider-3-height p-relative  rr-slider-3-thumb"
+                             data-background="{{ slide.image.url }}">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-7 col-lg-9 col-md-10">
+                                        <div class="rr-slider-3-content z-index-2">
+                                            <div class="rr-slider-3-title-box pb-15">
+                                                <h4 class="rr-slider-3-subtitle"> {{ slide.subtitle|default_if_none:"" }}</h4>
+                                                <h1 class="rr-slider-3-title">{{ slide.maintitle|default_if_none:"" }}</h1>
+                                                <p>{{ slide.description|default_if_none:""|linebreaksbr }}</p>
+                                            </div>
+                                            <div class="rr-slider-3-info">
+                                                <div class="rr-slider-3-btn">
+                                                    <a class="rr-btn-3" href="{{ slide.redirect_link }}">
+                                                    <span>{% translate 'More Information' %}
+                                                        <i class="fa-sharp fa-solid fa-plus"></i>
+                                                    </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+<!-- slider area end -->

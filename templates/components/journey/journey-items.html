@@ -1,0 +1,16 @@
+{% load i18n %}
+{% load journey %}
+
+{% get_journey_items as journey_items %}
+<div class="rr-services-details-list">
+    <span>{% translate 'IVF Journey' %}</span>
+    <ul>
+        <li>
+            {% for item in journey_items %}
+                <a href="{{ item.get_absolute_url }}" {% if journey == item %} class="active" {% endif %}>
+                    <i class="fa-solid fa-check"></i> {{ item.title }}
+                </a>
+            {% endfor %}
+        </li>
+    </ul>
+</div>

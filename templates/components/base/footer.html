@@ -1,0 +1,144 @@
+{% load static %}
+{% load i18n %}
+
+<footer>
+    <div class="rr-footer-main p-relative fix">
+
+        <!-- footer area start -->
+        <div class="rr-footer-area pt-80 p-relative fix">
+
+            <div class="container">
+                <div class="rr-footer-border">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".3s">
+                            <div class="rr-footer-widget footer-cols-1">
+                                <div class="rr-footer-logo pb-35">
+                                    <a href="{% url 'home' %}">
+                                        <img src="{% static 'img/logo/logo-white.png' %}" alt="img">
+                                    </a>
+                                </div>
+                                <div class="rr-footer-widget-content-list mb-25">
+                                    <div class="rr-footer-widget-content-list-item">
+                                        <i class="fa-sharp fa-solid fa-clock"></i>
+                                        <a href="#">{% translate 'Open Hours' %}:<br />
+                                            {% translate 'Mon-Sat: 9am-8pm Sun: 1pm-8pm' %}</a>
+                                    </div>
+                                    <div class="rr-footer-widget-content-list-item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <a href="{{ global_preferences.page__address_map_link }}" target="_blank">
+                                            {{ global_preferences.page__address }}
+                                        </a>
+                                    </div>
+                                    <div class="rr-footer-widget-content-list-item">
+                                        <i class="fa-sharp fa-solid fa-phone"></i>
+                                        <a href="tel:{{ global_preferences.page__phone_number|cut:" " }}">
+                                            {{ global_preferences.page__phone_number }}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="rr-footer-social">
+                                    <a href="{{ global_preferences.page__facebook_link }}" target="_blank">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+                                    <a href="{{ global_preferences.page__twitter_link }}" target="_blank">
+                                        <i class="fa-brands fa-twitter"></i>
+                                    </a>
+                                    <a href="{{ global_preferences.page__instagram_link }}" target="_blank">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".5s">
+                            <div class="rr-footer-widget footer-cols-2">
+                                <h4 class="rr-footer-title">{% translate 'Service' %}</h4>
+                                <div class="rr-footer-list ">
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'about' %}">
+                                                {% translate 'About Us' %}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'services' %}">
+                                                {% translate 'Services' %}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'journey' %}">
+                                                {% translate 'IVF Journey' %}
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'experience' %}">
+                                                {% translate 'Experience' %}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".7s">
+                            <div class="rr-footer-widget footer-cols-3">
+                                <h4 class="rr-footer-title">{% translate 'Quick Link' %}</h4>
+                                <div class="rr-footer-list">
+                                    <ul>
+                                        <li><a href="">{% translate 'Create Your Plan' %}</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6 mb-50 wow rrfadeUp" data-wow-duration=".9s"
+                            data-wow-delay=".9s">
+                            <div class="rr-footer-widget footer-cols-4">
+                                <h4 class="rr-footer-title">{% translate 'We are on the Map' %}</h4>
+                                <div class="rr-footer-contact">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3013.106422783004!2d29.0807707!3d40.9572474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac7272b86c89f%3A0x9016023d96f607af!2zT3AuIERyLiBDZW5naXogU2HEn8Sxcm_En2x1LCBLYWTEsW4gSGFzdGFsxLFrbGFyxLEgVmUgRG_En3Vt!5e0!3m2!1sen!2str!4v1717338198803!5m2!1sen!2str"
+                                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer area end -->
+
+        <!-- copy-right area start -->
+        <div class="rr-copyright-area p-relative">
+            <div class="container rr-copyright-broder rr-copyright-space">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                        data-wow-delay=".3s">
+                        <div class="rr-copyright-left text-center text-md-start">
+                            <p>
+                                {% blocktranslate trimmed %}
+                                Site by
+                                <a href="https://theblackcapmedia.com" target="_blank">
+                                    Black Cap Media
+                                </a>
+                                2024
+                                {% endblocktranslate %}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                        data-wow-delay=".5s">
+                        <div class="rr-copyright-right text-center text-md-end">
+                            <a href="{% url 'gdpr' %}">{% translate 'GDPR' %}</a>
+                            <a href="{% url 'privacy' %}">{% translate 'Privacy' %}</a>
+                            <a href="{% url 'blog_list' %}">{% translate 'Blog' %}</a>
+                            <a href="{% url 'contact' %}">{% translate 'Contact' %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copy-right area end -->
+    </div>
+</footer>

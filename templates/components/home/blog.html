@@ -1,0 +1,38 @@
+{% load static %}
+{% load i18n %}
+
+{% load blogs %}
+
+{% get_blogs recent=True limit=3 as blogs %}
+
+<div class="rr-blog-area pt-90 pb-90 fix">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="rr-blog-title-box text-center mb-45">
+                     <span class="rr-section-subtitle p-relative">
+                         {% static 'img/icons/section-icon.png' as section_icon %}
+                            <img src="{{ section_icon }}" alt="img">
+                            {% translate 'BLOG' %}
+                            <img src="{{ section_icon }}" alt="img">
+                     </span>
+                    <h4 class="rr-section-title">
+                        {% translate 'Latest News About IVF and More' %}
+                    </h4>
+                </div>
+            </div>
+            {% for blog in blogs %}
+                {% include 'components/blog/blog-grid-item.html' %}
+            {% endfor %}
+            <div class="blog-btn text-center wow rrfadeUp pt-20" data-wow-duration=".9s" data-wow-delay=".9s"
+                 style="visibility: visible; animation-duration: 0.9s; animation-delay: 0.9s; animation-name: rrfadeUp;">
+                <a class="rr-btn-black" href="{% url 'blog_list' %}">
+                    <span>
+                        {% translate 'VIEW ALL BLOG' %} <i class="fa-sharp fa-solid fa-plus"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- blog area end -->

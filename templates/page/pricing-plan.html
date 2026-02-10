@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block meta %}
+{% include "components/base/meta.html" with obj=plan %}
+{% endblock %}
+
+{% block banner %}
+{% include "components/banner.html" with obj=plan %}
+{% endblock %}
+
+
+{% block content %}
+<section class="postbox__area pt-100 pb-100">
+    <div class="container">
+        <h4 class="rr-section-title pb-5">{{plan.page_title|default_if_none:plan.name}}</h4>
+        {{ plan.content|default_if_none:""|safe }}
+    </div>
+</section>
+
+{% endblock %}

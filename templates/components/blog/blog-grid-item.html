@@ -1,0 +1,46 @@
+{% load i18n %}
+
+<div class="col-xl-4 col-lg-4 col-md-6 mb-30 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+    <div class="rr-blog-item">
+        {% if blog.image %}
+        <div class="rr-blog-thumb-main p-relative">
+            <a href="{{ blog.get_absolute_url }}">
+                <div class="rr-blog-thumb">
+                    <img src="{{ blog.image.url }}" alt="img">
+                </div>
+            </a>
+        </div>
+        {% endif %}
+        <div class="rr-blog-content rr-blog-content-opcity p-relative">
+            <a href="{{ blog.get_absolute_url }}">
+                <div class="rr-blog-text">
+                    <h4 class="rr-blog-title mb-0 pb-10">
+                        {{ blog.title }}
+
+                    </h4>
+                    <p>{{ blog.description|safe|default_if_none:"" }}</p>
+                </div>
+            </a>
+            <div class="rr-blog-wrap d-flex align-items-center justify-content-between">
+                {% if blog.author %}
+                <div class="rr-blog-item-user d-flex align-items-center">
+                    <div class="rr-blog-item-user-content">
+                        <span class="rr-blog-item-user-title">
+                            <a href="{% url 'blog_list' %}?author={{ blog.author }}">
+                                {{ blog.author }}
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="rr-blog-link">
+                    <a href="{{ blog.get_absolute_url }}">
+                        {% translate 'Read More' %}
+                        <i class="fa-light fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

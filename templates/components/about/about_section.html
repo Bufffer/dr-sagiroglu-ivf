@@ -1,0 +1,31 @@
+{% load static i18n %}
+
+<section class="rr-home2-about pt-100 pb-100">
+    <div class="container">
+        <div class="row ">
+            <div class="col-12 mb-20 wow fadeInLeft">
+                <div class="rr-section rr-style-1 text-left mb-40">
+                    <span class="rr-section-subtitle p-relative">
+                        {% static 'img/icons/section-icon.png' as section_icon %}
+                        <img src="{{ section_icon }}" alt="img">
+                        {{ about.subtitle|default_if_none:"" }}
+                        <img src="{{ section_icon }}" alt="img">
+                    </span>
+                    <h4 class="rr-section-title pb-5">{{ about.title|default_if_none:"" }}</h4>
+                    <div class="rr-section-description">
+                        {% if about.image %}
+                        <div class="col-12 col-md-6 mt-3 float-end">
+                            <div class="about-us-img">
+                                <img src="{{about.image.url}}" alt="{{about.title}}" class="w-100">
+                            </div>
+                        </div>
+                        {% endif %}
+                        {{ about.content|safe|default_if_none:"" }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- About area end -->

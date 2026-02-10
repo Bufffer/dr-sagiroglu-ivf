@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load pricing %}
+
+{% block meta %}
+{% get_prices_page_obj as obj %}
+{% include "components/base/meta.html" %}
+{% endblock %}
+
+{% block banner %}
+{% get_prices_page_obj as obj %}
+{% include "components/banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+{% get_prices_page_obj as obj %}
+<section class="postbox__area pt-100 pb-50">
+    <div class="container">
+        <h4 class="rr-section-title pb-5">{{obj.title|default_if_none:""}}</h4>
+        {{ obj.content|safe|default_if_none:"" }}
+    </div>
+</section>
+
+
+<section class="postbox__area pt-50 pb-100">
+    <div class="container">
+        <h4 class="rr-section-title pb-5">{% translate "" %}</h4>
+
+        <table class="table table-bordered">
+            {% get_prices_categories as price_categories %}
+            {% for price_category in price_categories %}
+            <tr class="table-primary">
+                <th colspan="2">{{price_category.title}}</th>
+            </tr>
+            {% if price_category.description %}
+            <tr>
+                <td colspan="2">
+                    {{price_category.description}}
+                </td>
+            </tr>
+            {% endif %}
+            {% for price_item in price_category.priceserviceitem_set.all %}
+            <tr>
+                <td>
+                    {% if price_item.content %}
+                    <div class="accordion accordion-pricing" id="accordion-{{price_item.pk}}">
+                        <div class="accordion-item border-0">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed " type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-{{price_item.pk}}" aria-expanded="true"
+                                    aria-controls="collapse-{{price_item.pk}}">
+                                    {{price_item.title}}
+                                    <i class="bi bi-chevron-down ms-auto"></i>
+                                </button>
+                            </h2>
+                            <div id="collapse-{{price_item.pk}}" class="accordion-collapse collapse"
+                                data-bs-parent="#accordion-{{price_item.pk}}">
+                                <div class="accordion-body">
+                                    {{price_item.content|safe}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% else %}
+                    <div class="px-4 py-2">
+                        {{price_item.title}}
+                    </div>
+                    {% endif %}
+                </td>
+                <td class="col-2 px-4 align-middle text-center">
+                    {{price_item.price}}
+                </td>
+            </tr>
+            {% endfor %}
+        {% endfor %}
+
+        </table>
+    </div>
+</section>
+
+{% endblock %}

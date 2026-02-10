@@ -1,0 +1,94 @@
+.sticky-button-container {
+  position: fixed;
+  bottom: 100px;
+  right: 50px;
+  z-index: 999;
+}
+
+.sticky-button {
+  width: 44px;
+  height: 44px;
+  padding: 20px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: #263779;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.sticky-button i.fab {
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-whatsapp {
+  background-color: #68df33;
+}
+
+.sticky-whatsapp:hover {
+  color: white;
+  opacity: 0.8;
+}
+
+.sticky-instagram {
+  background-color: #feda77;
+  color: black;
+}
+
+.sticky-email {
+  background-color: #1ebeb6;
+}
+
+.sticky-button.sticky-phone i {
+  font-size: 22px;
+}
+.sticky-button i {
+  font-size: 26px;
+}
+
+/* Custom Width Layout: 600px. */
+@media only screen and (max-width: 480px) {
+  .sticky-button-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+  }
+
+  .sticky-button {
+    width: 100% !important;
+    position: relative;
+    bottom: 0;
+    font-size: 12px;
+    right: 0;
+    left: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .sticky-email {
+    background-color: #1ebeb6;
+    display: none;
+  }
+}
+
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .sticky-button-container {
+    right: 20px;
+  }
+}
+
+#scroll-top {
+  bottom: 170px;
+  right: 10px;
+}

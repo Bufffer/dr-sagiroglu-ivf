@@ -1,0 +1,48 @@
+{% load static %}
+{% load i18n %}
+
+<!-- cta area start -->
+<div class="rr-cta-area  rr-cta-bg  fix p-relative">
+    <div class="container">
+        <div class="row align-items-center rr-cta-wrap">
+            <div class="col-xl-6 col-lg-6 col-md-6 wow rrfadeUp">
+                <div class="rr-cta-left-box d-flex align-items-center">
+                    <div class="rr-cta-icon">
+                        <img src="{% static 'img/footer/email-icon.png' %}" alt="img">
+                    </div>
+                    <div class="rr-cta-content ml-20">
+                        <h4 class="rr-cta-title">{% translate 'Contact Us:' %}</h4>
+                        <span>{% translate 'We are here to help you' %}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 wow rrfadeUp">
+                <div class="rr-cta-right-box p-relative">
+                   <div class="newsletter-icon-list row my-3">
+                       <div class="newsletter-icon-item col">
+                           <a href="tel:{{ global_preferences.page__phone_number|cut:' ' }}">
+                               <i class="fa fa-phone"></i>
+                           </a>
+                       </div>
+                       <div class="newsletter-icon-item col">
+                           <a href="{{ global_preferences.page__whatsapp_link }}">
+                               <i class="fab fa-whatsapp"></i>
+                           </a>
+                       </div>
+                       <div class="newsletter-icon-item col">
+                           <a href="{{ global_preferences.page__instagram_link }}">
+                               <i class="fab fa-instagram"></i>
+                           </a>
+                       </div>
+                       <div class="newsletter-icon-item col">
+                           <a href="{{ global_preferences.page__facebook_link }}">
+                               <i class="fab fa-facebook-f"></i>
+                           </a>
+                       </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- cta area end -->

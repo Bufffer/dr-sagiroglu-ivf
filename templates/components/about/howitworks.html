@@ -1,0 +1,53 @@
+{% load static i18n %}
+
+<section class="rr-home2-about pt-100 pb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            {% if placement == "left" and image %}
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="about-us-img">
+                        <div class="rr-about-2-experience wow fadeInRight">
+                            <span>{% translate 'Are you ready?' %}</span>
+                        </div>
+                        <img src="{{ image.url }}" class="img-fluid rr-image1 wow fadeInRight" alt="home">
+                    </div>
+                </div>
+            {% endif %}
+            {% if placement != "left" and image %}
+                <div class="col-lg-6 col-md-6 col-12 d-md-none">
+                    <div class="about-us-img">
+                        <div class="rr-about-2-experience wow fadeInRight">
+                            <span>{% translate 'Are you ready?' %}</span>
+                        </div>
+                        <img src="{{ image.url }}" class="img-fluid rr-image1 wow fadeInRight" alt="home">
+                    </div>
+                </div>
+            {% endif %}
+            <div class="col-lg-6 col-md-6 col-12 mb-20 wow fadeInLeft">
+                <div class="rr-section rr-style-1 text-left mb-40">
+                    <span class="rr-section-subtitle p-relative">
+                      {% static 'img/icons/section-icon.png' as section_icon %}
+                      <img src="{{ section_icon }}" alt="img">
+                      {{ subtitle|default_if_none:"" }}
+                      <img src="{{ section_icon }}" alt="img">
+                    </span>
+                    <h4 class="rr-section-title pb-5">{{ title|default_if_none:"" }}</h4>
+                    <div class="rr-section-description">
+                        {{ content|safe|default_if_none:"" }}
+                    </div>
+                </div>
+            </div>
+            {% if placement != "left" and image %}
+                <div class="col-lg-6 col-md-6 col-12 d-none d-md-block">
+                    <div class="about-us-img">
+                        <div class="rr-about-2-experience wow fadeInRight">
+                            <span>{% translate 'Consultation before IVF' %}</span>
+                        </div>
+                        <img src="{{ image.url }}" class="img-fluid rr-image1 wow fadeInRight" alt="home">
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<!-- About area end -->

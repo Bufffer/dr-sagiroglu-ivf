@@ -1,0 +1,75 @@
+{% load i18n %}
+{% load services %}
+{% load forms %}
+{% get_home_contact_form as form %}
+<form id="home-contact-form"
+      method="POST"
+      action="{% url 'handle_home_contact_form' %}">
+    <b>
+        {% translate 'FILL OUT THE FORM TO START YOUR IVF JOURNEY AND OUR EXPERTS WILL CONTACT YOU AS SOON AS POSSIBLE' %}
+    </b>
+    <h4 class="rr-section-title pb-40">{% translate 'First step form for IVF' %}</h4>
+    {% csrf_token %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert {% if message.tags == 'error' %}alert-danger {% else %}alert-{{ message.tags }}{% endif %}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% if form.errors %}
+        {% for error in form.errors %}<div class="alert alert-danger">{{ error }}</div>{% endfor %}
+    {% endif %}
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+            <div class="rr-form-input-box rr-form-input-main">
+                <input name="full_name"
+                       type="text"
+                       placeholder="{% translate 'Name/Surname' %}">
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-6 mb-20">
+            <div class="rr-form-input-box rr-form-input-main">
+                <input name="email" type="email" placeholder="{% translate 'Email' %}">
+            </div>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 mb-20">
+            <div class="rr-form-input-box rr-form-input-main">
+                <input name="phone"
+                       type="text"
+                       placeholder="{% translate 'Phone Number' %}"
+                       id="contact-phone">
+            </div>
+        </div>
+        <div class=" col-md-12 col-12">
+            <div class="rr-form-input-box pb-30 rr-form-input-main">
+                <select name="service" style="display: none;">
+                    <option>{% translate 'Choose Service' %}</option>
+                    {% get_services as services %}
+                    {% for service in services %}<option value="{{ service.slug }}">{{ service.title }}</option>{% endfor %}
+                    <option value="other">{% trans "Other" %}</option>
+                </select>
+                <div class="nice-select" tabindex="0">
+                    <span class="current">{% translate 'Choose Service' %}</span>
+                    <ul class="list">
+                        <li data-value="Your Inquiry about" class="option selected focus">{% translate 'Choose Service' %}</li>
+                        {% for service in services %}<li data-value="{{ service.slug }}" class="option">{{ service.title }}</li>{% endfor %}
+                        <li data-value="other" class="option">{% trans 'Other' %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 mb-20">
+            <div class="rr-form-textarea-box">
+                <textarea name="message"
+                          placeholder="{% translate 'Please write your age, weight, chronic disease (if any) and your story of choosing IVF in this field and share with us.' %}"></textarea>
+            </div>
+        </div>
+    </div>
+    {{ form.captcha }}
+    {% include "components/recaptcha/recaptcha-warning.html" %}
+    
+    <button class="rr-btn rr-form-theme-bg rr-form-box-border" type="submit">
+        <span>{% translate 'SEND NOW' %}</span>
+    </button>
+</form>

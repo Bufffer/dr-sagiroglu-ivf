@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block meta %}
+    {% include "components/base/meta.html" with obj=service %}
+{% endblock %}
+
+{% block banner %}
+    {% include "components/banner.html" with obj=service %}
+{% endblock %}
+
+{% block content %}
+
+    <!-- service details area start -->
+    <section class="rr-services-details-area pt-100 pb-80">
+        <div class="container">
+            <div class="row mb-40">
+                <div class="col-12 col-md-8">
+                    {% if service.image %}
+                        <div class="mb-50">
+                            <div class="rr-services-details-thumb">
+                                <img src="{{ service.image.url }}" alt="img">
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="rr-service-details-info mt-20">
+                        <h4>{{ service.title }}</h4>
+                        {{ service.content|safe|default_if_none:"" }}
+                    </div>
+                    {% include "components/faqs.html" with faqs=service.faq_set.all obj=service %}
+                    {% include 'components/forms/first-step-form.html' %}
+                </div>
+                <div class="col-12 col-md-4">
+                    {% include 'components/services/service-categories.html' %}
+                    
+                    {% include 'components/services/patient-comments.html' %}
+
+                </div>
+            </div>
+                </div>
+    </section>
+
+    {% include 'components/home/pricing.html' with apply_negative_margin=True %}
+{% endblock %}

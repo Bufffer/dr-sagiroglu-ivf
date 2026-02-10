@@ -1,0 +1,7 @@
+from .base import *
+
+X_FRAME_OPTIONS = env("X_FRAME_OPTIONS", default="SAMEORIGIN")
+
+AUTH_PASSWORD_VALIDATORS = []
+
+SECURE_SSL_REDIRECT = False

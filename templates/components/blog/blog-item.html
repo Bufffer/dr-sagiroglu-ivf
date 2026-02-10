@@ -1,0 +1,28 @@
+{% load i18n %}
+
+<article class="postbox__item format-image mb-50 transition-3">
+    {% if blog.image %}
+    <div class="postbox__thumb w-img mb-25">
+        <a href="{{ blog.get_absolute_url }}">
+            <img src="{{ blog.image.url }}" alt="img">
+        </a>
+    </div>
+    {% endif %}
+    <div class="postbox__content">
+        <div class="postbox__meta mb-20">
+            <a href="{{ blog.category.get_absolute_url }}"><span><i
+                        class="fa-regular fa-location-dot"></i>{{ blog.category.title }}</span></a>
+        </div>
+        <a href="{{ blog.get_absolute_url }}">
+            <h3 class="postbox__title mb-10">
+                {{ blog.title }}
+            </h3>
+            <div class="postbox__text pb-10">
+                {{ blog.description|safe|default_if_none:"" }}
+            </div>
+            <div class="postbox__read-more">
+                <a href="{{ blog.get_absolute_url }}" class="rr-btn-blog"><span>{% translate 'Read More' %}</span></a>
+            </div>
+        </a>
+    </div>
+</article>

@@ -1,0 +1,147 @@
+{% load static %}
+{% load i18n %}
+{% load services %}
+{% load pricing %}
+
+
+<header class="rr-header-height ">
+    <!-- header top area start -->
+    <div class="rr-header-2-top d-none d-xxl-block grey-bg p-relative">
+        <div class="container custom-container-1 z-index-3">
+            <div class="rr-header-2-before">
+                <div class="row align-items-center">
+                    <div class="col-xxl-6 col-xl-4">
+                        <div class="rr-header-2-top-info text-end">
+                            <ul class="d-flex align-items-center">
+                                <li class="ml-50">
+                                    <span>
+                                        <i class="fa-solid fa-clock"></i>
+                                        {% translate 'Mon - Sat: 9am-8pm, Sun: 1pm-8pm' %}
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xxl-6 col-xl-8">
+                        <div class="rr-header-2-top-info d-flex align-items-center justify-content-end text-end">
+                            {% include 'components/base/language_dropdown.html' %}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header top area end -->
+    <!-- header area start -->
+    <div id="header-sticky" class="rr-header-area rr-header-3-menu">
+        <div class="container custom-container-1">
+            <div class="row align-items-center">
+                <div class="col-xl-2 col-lg-6 col-md-6 col-6">
+                    <div class="rr-header-logo">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'img/logo/logo-black.png' %}" alt="Jineart IVF">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-6 d-none d-xl-block">
+                    <div class="rr-header-main-menu rr-header-menu">
+                        <nav class="rr-main-menu-content text-end">
+                            <ul>
+                                <li class="has-dropdown">
+                                    <a href="#">
+                                        {% translate 'About Us' %}
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </a>
+                                    <ul class="submenu rr-submenu">
+                                        <li><a href="{% url 'about' %}">{% translate 'About Us' %}</a></li>
+                                        <li>
+                                            <a
+                                                href="{% url 'about_doctor' %}">{% translate 'Dr. Cengiz Sağıroğlu' %}</a>
+                                        </li>
+                                        <li><a href="{% url 'why_us' %}">{% translate 'Why Us?' %}</a>
+                                        </li>
+                                        <li><a href="{% url 'success_rates' %}">{% translate 'Success Rates' %}</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="{% url 'services' %}">
+                                        {% translate 'Services' %}
+                                        <i class="dropdown-icon fa-solid fa-caret-down"></i>
+                                    </a>
+                                    <ul class="submenu rr-submenu">
+                                        {% get_services in_navbar=True as services %}
+                                        {% for service in services %}
+                                        <li>
+                                            <a href="{{ service.get_absolute_url }}">
+                                                {{ service.title }}
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="#">
+                                        {% translate 'IVF Journey' %}
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </a>
+                                    <ul class="submenu rr-submenu">
+                                        <li><a href="{% url 'journey' %}">{% translate 'IVF Journey Step by Step' %}</a>
+                                        </li>
+                                        <li><a href="{% url 'how_it_works' %}">{% translate 'Plan Your Journey' %}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown">
+                                    <a href="#">
+                                        {% translate 'Plans and Pricing' %}
+                                        <i class="fa-solid fa-caret-down"></i>
+                                    </a>
+                                    <ul class="submenu rr-submenu">
+                                        {% get_pricing as pricing_plans %}
+                                        {% for plan in pricing_plans %}
+                                        <li>
+                                            <a href="{{plan.get_absolute_url}}">{{plan.name}}</a>
+                                        </li>
+                                        {% endfor %}
+                                        <li>
+                                            <a href="{% url 'pricing' %}">{% translate "TREATMENT FEES" %}</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="{% url 'blog_list' %}">{% translate 'Blog' %}</a></li>
+                                <li><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-6">
+                    <div class="rr-header-right d-flex align-items-center justify-content-end">
+                        {% include 'components/base/language_dropdown.html' with mobile=True %}
+                        <div class="rr-header-bar d-xl-none d-block">
+                            <button class="rr-menu-bar mr-30"><i class="fa-solid fa-bars-staggered"></i></button>
+                        </div>
+                        <div class="d-none d-xxl-block ">
+                            <div class="rr-header-2-contat d-flex align-items-center">
+                                <div class="rr-header-2-contat-icon p-relative">
+                                    <span><i class="fa-solid fa-phone"></i></span>
+                                </div>
+                                <div class="rr-header-2-contat-text ml-20">
+                                    <h4>{% translate 'Contact on Whatsapp' %}</h4>
+                                    <b>
+                                        <a href="{{ global_preferences.page__whatsapp_link }}">
+                                            24/7 – {{ global_preferences.page__phone_number }}
+                                        </a>
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header area end -->
+
+
+</header>

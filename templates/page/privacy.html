@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load gdpr_page %}
+
+{% block meta %}
+    {% get_privacy_obj as obj %}
+    {% include "components/base/meta.html" %}
+{% endblock %}
+
+{% block banner %}
+    {% get_privacy_obj as obj %}
+    {% include "components/banner.html" %}
+{% endblock %}
+
+
+{% block content %}
+    {% get_privacy_obj as obj %}
+    <section class="postbox__area pt-100 pb-100">
+        <div class="container">
+            <h4 class="rr-section-title pb-5">{% translate "Privacy" %}</h4>
+            {{ obj.content|safe|default_if_none:"" }}
+        </div>
+    </section>
+
+{% endblock %}

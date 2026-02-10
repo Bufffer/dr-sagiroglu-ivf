@@ -1,0 +1,38 @@
+{% load static %}
+{% load i18n %}
+{% load comments %}
+
+<!-- testimonial area start -->
+<div class="rr-testimonial-area p-relative pt-90 pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="rr-price-2-title-box text-center mb-45">
+                    <div class="rr-video-title-box z-index-2">
+                        <span class="rr-video-subtitle p-relative">
+                            {% static 'img/icons/section-icon.png' as section_icon %}
+                            <img src="{{ section_icon }}" alt="img">
+                            {% translate 'THANK YOU FOR CHOOSING US' %} 
+                            <img src="{{ section_icon }}" alt="img">
+                        </span>
+                        <h4 class="rr-section-title">{% translate 'Dr. Cengiz Sağıroğlu' %}</h4>
+                    </div>
+                </div>
+                <div class="rr-testimonial-wrapper">
+                    <div class="swiper-container rr-testimonial-active">
+                        <div class="swiper-wrapper">
+                            {% get_patient_comments limit=10 as comments %}
+                            {% for comment in comments %}
+                                {% include 'components/home/patient-comment-item.html' %}
+                            {% endfor %}
+
+                        </div>
+                        <div class="rr-main-swiper-dot text-center mt-20">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- testimonial area end -->

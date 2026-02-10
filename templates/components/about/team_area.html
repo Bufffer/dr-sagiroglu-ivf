@@ -1,0 +1,113 @@
+{% load i18n static %}
+
+<section class="rr-team-4-area pt-100 pb-80 fix">
+    <div class="container">
+        <div class="row mb-40">
+            <div class="col-xl-12 wow rrfadeUp mb-100" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="rr-price-2-title-box text-center mb-45">
+                    <span class="rr-section-subtitle p-relative">
+                        {% static 'img/icons/section-icon.png' as section_icon %}
+                        <img src="{{ section_icon }}" alt="img">
+                        {% translate 'MORE ABOUT US' %}
+                        <img src="{{ section_icon }}" alt="img">
+                    </span>
+                    <h4 class="rr-section-title rr-section-title-space">
+                        {% translate 'Discover more about us and your journey!' %}
+                    </h4>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                <div class="rr-team-4-item p-relative mb-60">
+                    <a href="{% url 'about_doctor' %}">
+                        <div class="rr-team-4-thumb p-relative ">
+                            <div class="rr-team-4-img">
+                                <img class="w-100" src="{% static 'img/team/cengiz_sagiroglu.jpg' %}" alt="img">
+                            </div>
+                        </div>
+                        <div class="rr-team-4-content text-center p-relative">
+                            <h3 class="rr-team-4-title">
+                                {% translate 'Dr. Cengiz Sağıroğlu' %}
+                            </h3>
+                            <span>{% translate 'Discover Your Doctor.' %}</span>
+                        </div>
+                        <div class="rr-team-4-arrow">
+                            <a href="{% url 'about_doctor' %}">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow rrfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                <div class="rr-team-4-item p-relative mb-60">
+                    <a href="{% url 'why_us' %}">
+                        <div class="rr-team-4-thumb p-relative ">
+                            <div class="rr-team-4-img">
+                                <img class="w-100" src="{% static 'img/team/jineart_clinic.jpg' %}" alt="img">
+                            </div>
+                        </div>
+                        <div class="rr-team-4-content text-center p-relative">
+                            <h3 class="rr-team-4-title">
+                                {% translate 'Discover Why Our Clinic?' %}
+                            </h3>
+                            <span>{% translate 'Why Us?' %}</span>
+                        </div>
+                        <div class="rr-team-4-arrow">
+                            <a href="{% url 'why_us' %}">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                data-wow-delay=".7s">
+                <div class="rr-team-4-item p-relative mb-60">
+                    <a href="{% url 'success_rates' %}">
+                        <div class="rr-team-4-thumb p-relative ">
+                            <div class="rr-team-4-img">
+                                <img class="w-100" src="{% static 'img/team/jineart_lab.jpg' %}" alt="img">
+                            </div>
+                        </div>
+
+                        <div class="rr-team-4-content text-center p-relative">
+                            <h3 class="rr-team-4-title">
+                                {% translate 'Discover Succes Rates' %}
+                            </h3>
+                            <span>{% translate 'About Succes Rates' %}</span>
+                        </div>
+                        <div class="rr-team-4-arrow">
+                            <a href="{% url 'success_rates' %}">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 wow rrfadeUp" data-wow-duration=".9s"
+                data-wow-delay=".9s">
+                <div class="rr-team-4-item p-relative mb-60">
+                    <a href="{% url 'how_it_works' %}">
+                        <div class="rr-team-4-thumb p-relative ">
+                            <div class="rr-team-4-img">
+                                <img class="w-100" src="{% static 'img/team/how_it_works.jpg' %}" alt="img">
+                            </div>
+                        </div>
+
+                        <div class="rr-team-4-content text-center p-relative">
+                            <h3 class="rr-team-4-title">
+                                {% translate 'How IVF Journey works?' %}
+                            </h3>
+                            <span>{% translate 'About your journey' %}</span>
+                        </div>
+                        <div class="rr-team-4-arrow">
+                            <a href="{% url 'how_it_works' %}">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </a>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

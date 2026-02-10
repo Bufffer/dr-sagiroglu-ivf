@@ -1,0 +1,8 @@
+{% load about %}
+
+{% get_howitworks_seo_obj as about %}
+{% include 'components/about/howitworks.html' with title=about.title1 subtitle=about.subtitle1 content=about.content1 image=about.image1 placement="left" %}
+
+{% include 'components/about/howitworks.html' with title=about.title2 subtitle=about.subtitle2 content=about.content2 image=about.image2 placement="right" %}
+
+{% include 'components/about/howitworks.html' with title=about.title3 subtitle=about.subtitle3 content=about.content3 image=about.image3 placement="left" %}
