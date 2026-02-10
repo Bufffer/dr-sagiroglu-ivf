@@ -108,7 +108,8 @@ MEDIA_ROOT = BASE_DIR / "public/media"
 MEDIA_URL = "/media/"
 
 # WhiteNoise configuration for static files
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# Using CompressedStaticFilesStorage instead of Manifest version to avoid strict mode errors
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 
 LOCALE_PATHS = (BASE_DIR / "locale/",)
