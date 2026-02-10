@@ -69,8 +69,8 @@ coverage.xml
 
 # Translations
 *.mo
-*.po
-*.pot
+# *.po  - Commented out to include translations
+# *.pot  - Commented out to include translations
 
 # Sphinx documentation
 docs/_build/
@@ -78,7 +78,7 @@ docs/_build/
 # PyBuilder
 target/
 
-locale/
+# locale/  - Commented out to include locale folder
 
 ### Django ###
 *.log

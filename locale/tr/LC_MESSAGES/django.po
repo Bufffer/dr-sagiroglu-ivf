@@ -1,0 +1,1019 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: templates/page/pricing.html:28
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-28 15:54+0300\n"
+"PO-Revision-Date: 2024-10-11 11:33+0156\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: config/settings/base/main.py:115
+msgid "English"
+msgstr ""
+
+#: config/settings/base/main.py:116
+msgid "Türkçe"
+msgstr ""
+
+#: config/settings/base/main.py:117
+msgid "German"
+msgstr ""
+
+#: page/admin/about.py:13 page/admin/about.py:32 page/admin/blogs.py:22
+#: page/admin/blogs.py:33 page/admin/gdpr.py:13 page/admin/gdpr.py:23
+#: page/admin/journey.py:22 page/admin/pricing.py:20 page/admin/pricing.py:51
+#: page/admin/services.py:24 page/admin/services.py:38 page/models/about.py:20
+#: page/models/blogs.py:57 page/models/gdpr.py:11 page/models/gdpr.py:23
+#: page/models/journey.py:31 page/models/pricing.py:61
+#: page/models/pricing.py:94 page/models/services.py:55
+msgid "Content"
+msgstr ""
+
+#: page/admin/about.py:14 page/admin/about.py:50 page/admin/blogs.py:14
+#: page/admin/blogs.py:47 page/admin/contact.py:13 page/admin/experience.py:13
+#: page/admin/gdpr.py:14 page/admin/gdpr.py:24 page/admin/journey.py:13
+#: page/admin/pricing.py:23 page/admin/pricing.py:52 page/admin/services.py:14
+#: page/admin/services.py:56
+msgid "Banner Information"
+msgstr ""
+
+#: page/admin/about.py:15 page/admin/about.py:51 page/admin/blogs.py:15
+#: page/admin/blogs.py:48 page/admin/contact.py:14 page/admin/experience.py:14
+#: page/admin/gdpr.py:15 page/admin/gdpr.py:25 page/admin/home.py:13
+#: page/admin/journey.py:14 page/admin/pricing.py:24 page/admin/pricing.py:53
+#: page/admin/services.py:15 page/admin/services.py:57
+msgid "Seo Information"
+msgstr ""
+
+#: page/admin/faqs.py:13
+msgid "FAQ Section"
+msgstr ""
+
+#: page/dynamic_preferences_registry.py:17
+#: templates/components/forms/home_contact_form.html:40
+msgid "Phone Number"
+msgstr "Telefon Numaranız"
+
+#: page/dynamic_preferences_registry.py:25
+msgid "Email Address"
+msgstr ""
+
+#: page/dynamic_preferences_registry.py:33 templates/page/contact.html:46
+msgid "Address"
+msgstr "Adres"
+
+#: page/dynamic_preferences_registry.py:41
+msgid "Address Map Link"
+msgstr ""
+
+#: page/dynamic_preferences_registry.py:49
+msgid "Facebook Link"
+msgstr ""
+
+#: page/dynamic_preferences_registry.py:57
+msgid "Instagram Link"
+msgstr ""
+
+#: page/dynamic_preferences_registry.py:65
+msgid "Whatsapp Link"
+msgstr ""
+
+#: page/dynamic_preferences_registry.py:73 page/models/about.py:23
+msgid "Youtube Link"
+msgstr ""
+
+#: page/models/about.py:18 page/models/home.py:28
+msgid "Subtitle"
+msgstr ""
+
+#: page/models/about.py:19 page/models/blogs.py:30 page/models/blogs.py:54
+#: page/models/experience.py:26 page/models/experience.py:39
+#: page/models/journey.py:29 page/models/pricing.py:76
+#: page/models/pricing.py:93 page/models/services.py:31
+#: page/models/services.py:52
+msgid "Title"
+msgstr ""
+
+#: page/models/about.py:24 page/models/comments.py:14
+#: page/models/experience.py:40 page/models/home.py:38
+#: page/models/journey.py:35 page/models/services.py:67
+msgid "Image"
+msgstr ""
+
+#: page/models/about.py:36 page/models/about.py:37
+msgid "About Page SEO"
+msgstr ""
+
+#: page/models/about.py:49 page/models/about.py:50
+msgid "Cengiz Sagiroglu Page SEO"
+msgstr ""
+
+#: page/models/about.py:63 page/models/about.py:64
+msgid "Why Us Page SEO"
+msgstr ""
+
+#: page/models/about.py:77 page/models/about.py:78
+msgid "Success Rates Page SEO"
+msgstr ""
+
+#: page/models/about.py:88
+msgid "Subtitle 1"
+msgstr ""
+
+#: page/models/about.py:89
+msgid "Title 1"
+msgstr ""
+
+#: page/models/about.py:90
+msgid "Content 1"
+msgstr ""
+
+#: page/models/about.py:91
+msgid "Subtitle 2"
+msgstr ""
+
+#: page/models/about.py:92
+msgid "Title 2"
+msgstr ""
+
+#: page/models/about.py:93
+msgid "Content 2"
+msgstr ""
+
+#: page/models/about.py:94
+msgid "Subtitle 3"
+msgstr ""
+
+#: page/models/about.py:95
+msgid "Title 3"
+msgstr ""
+
+#: page/models/about.py:96
+msgid "Content 3"
+msgstr ""
+
+#: page/models/about.py:100
+msgid "Image 1"
+msgstr ""
+
+#: page/models/about.py:101
+msgid "Image 2"
+msgstr ""
+
+#: page/models/about.py:102
+msgid "Image 3"
+msgstr ""
+
+#: page/models/about.py:105 page/models/about.py:106
+msgid "Plan Your Journey Page SEO"
+msgstr ""
+
+#: page/models/blogs.py:21 page/models/blogs.py:22
+msgid "Blogs Page SEO"
+msgstr ""
+
+#: page/models/blogs.py:31 page/models/blogs.py:55 page/models/experience.py:27
+#: page/models/journey.py:30 page/models/pricing.py:77
+#: page/models/services.py:32 page/models/services.py:53
+msgid "Slug"
+msgstr ""
+
+#: page/models/blogs.py:38
+msgid "Blog Category"
+msgstr ""
+
+#: page/models/blogs.py:39
+msgid "Blog Categories"
+msgstr ""
+
+#: page/models/blogs.py:56 page/models/home.py:29 page/models/journey.py:32
+#: page/models/pricing.py:78 page/models/services.py:54
+msgid "Description"
+msgstr ""
+
+#: page/models/blogs.py:64 page/models/services.py:63
+msgid "Category"
+msgstr ""
+
+#: page/models/blogs.py:69
+msgid "Blog Image"
+msgstr ""
+
+#: page/models/blogs.py:71
+msgid "Author Image"
+msgstr ""
+
+#: page/models/blogs.py:74
+msgid "Author"
+msgstr ""
+
+#: page/models/blogs.py:76
+msgid "View Count"
+msgstr ""
+
+#: page/models/blogs.py:79 page/models/faqs.py:33
+#: templates/components/base/footer.html:135
+#: templates/components/base/header.html:112
+msgid "Blog"
+msgstr ""
+
+#: page/models/blogs.py:80
+msgid "Blogs"
+msgstr ""
+
+#: page/models/comments.py:7 page/models/pricing.py:13
+#: page/models/pricing.py:38
+msgid "Name"
+msgstr ""
+
+#: page/models/comments.py:9
+msgid "Role"
+msgstr ""
+
+#: page/models/comments.py:10
+msgid "Comment"
+msgstr ""
+
+#: page/models/comments.py:12 page/models/pricing.py:21
+#: page/models/pricing.py:47 page/models/pricing.py:80
+#: page/models/pricing.py:104 page/models/services.py:74
+msgid "Ordering"
+msgstr ""
+
+#: page/models/comments.py:21
+msgid "Patient Comment"
+msgstr ""
+
+#: page/models/comments.py:22
+msgid "Patient Comments"
+msgstr ""
+
+#: page/models/common.py:8 page/models/common.py:12
+msgid "Keyword"
+msgstr ""
+
+#: page/models/common.py:13
+msgid "Keywords"
+msgstr ""
+
+#: page/models/common.py:20
+msgid "SEO Title"
+msgstr ""
+
+#: page/models/common.py:21
+msgid "Meta Description"
+msgstr ""
+
+#: page/models/common.py:27
+msgid "Meta Keywords"
+msgstr ""
+
+#: page/models/contact.py:16 page/models/contact.py:17
+msgid "Contact Page SEO"
+msgstr ""
+
+#: page/models/experience.py:17 page/models/experience.py:18
+msgid "Experience Page SEO"
+msgstr ""
+
+#: page/models/experience.py:31
+msgid "Experience Category"
+msgstr ""
+
+#: page/models/experience.py:32
+msgid "Experience Categories"
+msgstr ""
+
+#: page/models/experience.py:41
+msgid "category"
+msgstr ""
+
+#: page/models/experience.py:43
+msgid "In Jineart Clinic?"
+msgstr ""
+
+#: page/models/experience.py:44
+msgid "In Jineart Lab?"
+msgstr ""
+
+#: page/models/experience.py:47
+msgid "Experience Item"
+msgstr ""
+
+#: page/models/experience.py:48
+msgid "Experience Items"
+msgstr ""
+
+#: page/models/faqs.py:9
+msgid "FAQ Subtitle"
+msgstr ""
+
+#: page/models/faqs.py:11
+msgid "FAQ Title"
+msgstr ""
+
+#: page/models/faqs.py:12
+msgid "FAQ Description"
+msgstr ""
+
+#: page/models/faqs.py:18
+msgid "Question"
+msgstr ""
+
+#: page/models/faqs.py:19
+msgid "Answer"
+msgstr ""
+
+#: page/models/faqs.py:26 templates/components/base/footer.html:56
+msgid "Service"
+msgstr ""
+
+#: page/models/faqs.py:40
+msgid "About Page"
+msgstr ""
+
+#: page/models/faqs.py:47
+msgid "Cengiz Sagiroglu Page"
+msgstr ""
+
+#: page/models/faqs.py:54
+msgid "Jineart Clinic Page"
+msgstr ""
+
+#: page/models/faqs.py:61
+msgid "Jineart Lab Page"
+msgstr ""
+
+#: page/models/faqs.py:68
+msgid "How It Works Page"
+msgstr ""
+
+#: page/models/faqs.py:72
+msgid "Frequently Asked Question"
+msgstr ""
+
+#: page/models/faqs.py:73
+msgid "Frequently Asked Questions"
+msgstr ""
+
+#: page/models/gdpr.py:17 page/models/gdpr.py:18
+msgid "GDPR Page SEO"
+msgstr ""
+
+#: page/models/gdpr.py:29 page/models/gdpr.py:30
+msgid "Privacy Page SEO"
+msgstr ""
+
+#: page/models/home.py:19 page/models/home.py:20
+msgid "Home SEO"
+msgstr ""
+
+#: page/models/home.py:26
+msgid "Main Title"
+msgstr ""
+
+#: page/models/home.py:31
+msgid "Redirect Link"
+msgstr ""
+
+#: page/models/home.py:39
+msgid "Order"
+msgstr ""
+
+#: page/models/home.py:42
+#, python-format
+msgid "Banner Slider %s"
+msgstr ""
+
+#: page/models/home.py:45
+msgid "Banner Slider"
+msgstr ""
+
+#: page/models/home.py:46
+msgid "Banner Sliders"
+msgstr ""
+
+#: page/models/journey.py:20 page/models/journey.py:21
+msgid "Journey Page SEO"
+msgstr ""
+
+#: page/models/journey.py:39
+msgid "Journey Item"
+msgstr ""
+
+#: page/models/journey.py:40
+msgid "Journey Items"
+msgstr ""
+
+#: page/models/pricing.py:15 page/models/pricing.py:60
+msgid "Page Title"
+msgstr ""
+
+#: page/models/pricing.py:17
+msgid "Page Content"
+msgstr ""
+
+#: page/models/pricing.py:22
+msgid "Is Special?"
+msgstr ""
+
+#: page/models/pricing.py:28 page/models/pricing.py:43
+msgid "Pricing Plan"
+msgstr ""
+
+#: page/models/pricing.py:29
+msgid "Pricing Plans"
+msgstr ""
+
+#: page/models/pricing.py:46
+msgid "Is Checked?"
+msgstr ""
+
+#: page/models/pricing.py:53
+msgid "Pricing Plan Feature"
+msgstr ""
+
+#: page/models/pricing.py:54
+msgid "Pricing Plan Features"
+msgstr ""
+
+#: page/models/pricing.py:67 page/models/pricing.py:68
+msgid "Prices Page SEO"
+msgstr ""
+
+#: page/models/pricing.py:83
+msgid "Price Service Category"
+msgstr ""
+
+#: page/models/pricing.py:84
+msgid "Price Service Categories"
+msgstr ""
+
+#: page/models/pricing.py:103
+msgid "Price"
+msgstr ""
+
+#: page/models/pricing.py:107
+msgid "Price Service Item"
+msgstr ""
+
+#: page/models/pricing.py:108
+msgid "Price Service Items"
+msgstr ""
+
+#: page/models/services.py:22 page/models/services.py:23
+msgid "Services Page SEO"
+msgstr ""
+
+#: page/models/services.py:36
+msgid "Service Category"
+msgstr ""
+
+#: page/models/services.py:37
+#: templates/components/services/service-categories.html:6
+msgid "Service Categories"
+msgstr ""
+
+#: page/models/services.py:69
+msgid "Icon"
+msgstr ""
+
+#: page/models/services.py:70
+msgid "In Navigation?"
+msgstr ""
+
+#: page/models/services.py:71
+msgid "In Home Page?"
+msgstr ""
+
+#: page/models/services.py:72
+msgid "In About Page?"
+msgstr ""
+
+#: page/models/services.py:73
+msgid "In Cengiz Sagiroglu Page?"
+msgstr ""
+
+#: page/models/services.py:77
+msgid "Service Item"
+msgstr ""
+
+#: page/models/services.py:78
+msgid "Service Items"
+msgstr ""
+
+#: page/urls.py:8
+msgid "about/"
+msgstr "hakkimizda/"
+
+#: page/urls.py:9
+msgid "about-doctor/"
+msgstr "drcengizsagiroglu-hakkinda/"
+
+#: page/urls.py:10
+msgid "why-us/"
+msgstr "neden-biz/"
+
+#: page/urls.py:11
+msgid "success-rates/"
+msgstr "basari-oranlari/"
+
+#: page/urls.py:12
+msgid "how-it-works/"
+msgstr "yolculugunuzu-planlayin"
+
+#: page/urls.py:13
+msgid "services/"
+msgstr "hizmetler"
+
+#: page/urls.py:14
+msgid "services/<slug>/"
+msgstr "hizmetler/<slug>/"
+
+#: page/urls.py:15
+msgid "journey/"
+msgstr "adim-adim-tup-bebek"
+
+#: page/urls.py:16
+msgid "experience/"
+msgstr "deneyim/"
+
+#: page/urls.py:17
+msgid "blog/"
+msgstr "blog-tr/"
+
+#: page/urls.py:18
+msgid "blog/<slug>/"
+msgstr "blog-tr/<slug>/"
+
+#: page/urls.py:19
+msgid "contact/"
+msgstr "iletisim/"
+
+#: page/urls.py:20
+msgid "gdpr/"
+msgstr "gdpr-tr/"
+
+#: page/urls.py:21
+msgid "privacy/"
+msgstr "gizlilik/"
+
+#: page/urls.py:22
+msgid "plan/<pk>/"
+msgstr "plan-tr/<pk>/"
+
+#: page/urls.py:23
+msgid "pricing/"
+msgstr "fiyatlandirma/"
+
+#: templates/components/about/call_area.html:14
+msgid "For detailed information, you can contact us via WhatsApp."
+msgstr "Detaylı bilgi için WhatsApp üzerinden bize ulaşabilirsiniz."
+
+#: templates/components/about/call_area.html:15
+msgid "WhatsApp"
+msgstr ""
+
+#: templates/components/about/call_area.html:26
+msgid "Contact Us"
+msgstr "Bize Ulaşın"
+
+#: templates/components/about/howitworks.html:10
+#: templates/components/about/howitworks.html:20
+msgid "Are you ready?"
+msgstr "Hazır mısınız?"
+
+#: templates/components/about/howitworks.html:44
+msgid "Consultation before IVF"
+msgstr "Tüp bebek öncesi konsültasyon"
+
+#: templates/components/about/services_section.html:13
+#: templates/components/home/ivf-services.html:12
+#: templates/page/services.html:26
+msgid "SERVICES"
+msgstr "HİZMETLER"
+
+#: templates/components/about/services_section.html:17
+msgid "What can we help you with?"
+msgstr "Size nasıl yardımcı olabiliriz?"
+
+#: templates/components/about/team_area.html:11
+msgid "MORE ABOUT US"
+msgstr "HAKKIMIZDA DAHA FAZLASI"
+
+#: templates/components/about/team_area.html:15
+msgid "Discover more about us and your journey!"
+msgstr "Tüp bebek yolculuğunuz hakkında daha fazla bilgi edinin!"
+
+#: templates/components/about/team_area.html:29
+#: templates/components/base/header.html:60
+#: templates/components/home/patient-comments.html:18
+msgid "Dr. Cengiz Sağıroğlu"
+msgstr "Dr. Cengiz Sağıroğlu"
+
+#: templates/components/about/team_area.html:31
+msgid "Discover Your Doctor."
+msgstr "Doktorunuz ile Tanışın."
+
+#: templates/components/about/team_area.html:51
+msgid "Discover Why Our Clinic?"
+msgstr "Neden Bizi Tercih Etmelisiniz?"
+
+#: templates/components/about/team_area.html:53
+#: templates/components/base/header.html:62
+msgid "Why Us?"
+msgstr "Neden Biz?"
+
+#: templates/components/about/team_area.html:75
+msgid "Discover Succes Rates"
+msgstr "Başarı Oranlarımızı Keşfedin!"
+
+#: templates/components/about/team_area.html:77
+msgid "About Succes Rates"
+msgstr "Başarı Oranları"
+
+#: templates/components/about/team_area.html:99
+msgid "How IVF Journey works?"
+msgstr "Tüp Bebek Yolculuğu Hakkında"
+
+#: templates/components/about/team_area.html:101
+msgid "About your journey"
+msgstr "Deneyiminizi İnceleyin"
+
+#: templates/components/banner.html:18
+msgid "Home"
+msgstr "Ana Sayfa"
+
+#: templates/components/banner.html:30
+msgid "CONTACT NOW"
+msgstr "ŞİMDİ İLETİŞİME GEÇİN"
+
+#: templates/components/base/footer.html:24
+msgid "Open Hours"
+msgstr "Çalışma Saatlerimiz"
+
+#: templates/components/base/footer.html:25
+msgid "Mon-Sat: 9am-8pm Sun: 1pm-8pm"
+msgstr "Pzt-Cmt: 09:00-20:00, Paz: 13:00-20:00"
+
+#: templates/components/base/footer.html:61
+#: templates/components/base/header.html:53
+#: templates/components/base/header.html:57
+msgid "About Us"
+msgstr "Hakkımızda"
+
+#: templates/components/base/footer.html:66
+#: templates/components/base/header.html:69
+msgid "Services"
+msgstr "Hizmetler"
+
+#: templates/components/base/footer.html:71
+#: templates/components/base/header.html:85
+#: templates/components/journey/journey-items.html:6
+msgid "IVF Journey"
+msgstr "Tüp Bebek"
+
+#: templates/components/base/footer.html:76
+msgid "Experience"
+msgstr "Deneyim"
+
+#: templates/components/base/footer.html:86
+msgid "Quick Link"
+msgstr "Tüp Bebek"
+
+#: templates/components/base/footer.html:89
+msgid "Create Your Plan"
+msgstr "Planınızı Oluşturun"
+
+#: templates/components/base/footer.html:97
+msgid "We are on the Map"
+msgstr "Haritada Biz"
+
+#: templates/components/base/footer.html:120
+msgid ""
+"Site by <a href=\"https://theblackcapmedia.com\" target=\"_blank\"> Black "
+"Cap Media </a> 2024"
+msgstr ""
+
+#: templates/components/base/footer.html:133 templates/page/gdpr.html:20
+msgid "GDPR"
+msgstr "KVKK"
+
+#: templates/components/base/footer.html:134 templates/page/privacy.html:20
+msgid "Privacy"
+msgstr "Gizlilik"
+
+#: templates/components/base/footer.html:136
+#: templates/components/base/header.html:113
+msgid "Contact"
+msgstr "İletişim"
+
+#: templates/components/base/header.html:19
+msgid "Mon - Sat: 9am-8pm, Sun: 1pm-8pm"
+msgstr "Pzt -Cmt:9.00-20.00, Paz:13.00-20.00"
+
+#: templates/components/base/header.html:64
+msgid "Success Rates"
+msgstr "Başarı Oranları"
+
+#: templates/components/base/header.html:89
+#: templates/components/home/ivf-journey.html:16
+msgid "IVF Journey Step by Step"
+msgstr "Adım Adım Tüp Bebek Deneyimi"
+
+#: templates/components/base/header.html:91
+msgid "Plan Your Journey"
+msgstr "Yolculuğunuzu Planlayın"
+
+#: templates/components/base/header.html:97
+msgid "Plans and Pricing"
+msgstr "Planlar"
+
+#: templates/components/base/header.html:108
+msgid "TREATMENT FEES"
+msgstr "TEDAVİ ÜCRETLERİ"
+
+#: templates/components/base/header.html:130
+msgid "Contact on Whatsapp"
+msgstr "Whatsapp'tan Yazın"
+
+#: templates/components/base/meta.html:2
+msgid "Jineart IVF"
+msgstr ""
+
+#: templates/components/base/mobile-menu.html:18
+msgid "Contact us"
+msgstr "Bize Ulaşın"
+
+#: templates/components/base/newsletter.html:14
+msgid "Contact Us:"
+msgstr "Bize Ulaşın:"
+
+#: templates/components/base/newsletter.html:15
+msgid "We are here to help you"
+msgstr "Size yardımcı olmaktan mutluluk duyarız!"
+
+#: templates/components/blog/blog-categories.html:6
+msgid "Catagories"
+msgstr "Kategoriler"
+
+#: templates/components/blog/blog-grid-item.html:38
+#: templates/components/blog/blog-item.html:24
+#: templates/components/home/about.html:37
+msgid "Read More"
+msgstr "Devamını Oku"
+
+#: templates/components/blog/recent-items.html:6
+msgid "Recent Post"
+msgstr "Son Gönderiler"
+
+#: templates/components/blog/search-widget.html:8
+msgid "Search"
+msgstr "Arama"
+
+#: templates/components/forms/first-step-form.html:9
+msgid "First Step form for IVF"
+msgstr "Tüp Bebek için İlk Adım Formu"
+
+#: templates/components/forms/first-step-form.html:22
+#: templates/components/forms/home_contact_form.html:9
+msgid ""
+"FILL OUT THE FORM TO START YOUR IVF JOURNEY AND OUR EXPERTS WILL CONTACT YOU "
+"AS SOON AS POSSIBLE"
+msgstr ""
+"Tüp bebek yolculuğunuza başlamak için formu doldurun, uzmanlarımız en kısa "
+"sürede sizinle iletişime geçecektir."
+
+#: templates/components/forms/first-step-form.html:30
+#: templates/components/forms/home_contact_form.html:28
+msgid "Name/Surname"
+msgstr "Adınız/Soyadınız"
+
+#: templates/components/forms/first-step-form.html:35
+#: templates/components/forms/home_contact_form.html:33
+msgid "Email"
+msgstr "E-posta"
+
+#: templates/components/forms/first-step-form.html:42
+msgid "Your Phone"
+msgstr "Telefon Numaranız"
+
+#: templates/components/forms/first-step-form.html:49
+#: templates/components/forms/first-step-form.html:55
+#: templates/components/forms/first-step-form.html:57
+#: templates/components/forms/home_contact_form.html:47
+#: templates/components/forms/home_contact_form.html:53
+#: templates/components/forms/home_contact_form.html:55
+msgid "Choose Service"
+msgstr "Talep Edilen Hizmet"
+
+#: templates/components/forms/first-step-form.html:52
+#: templates/components/forms/first-step-form.html:59
+#: templates/components/forms/home_contact_form.html:50
+#: templates/components/forms/home_contact_form.html:57
+msgid "Other"
+msgstr "Farklı bir başlık..."
+
+#: templates/components/forms/first-step-form.html:67
+#: templates/components/forms/home_contact_form.html:65
+msgid ""
+"Please write your age, weight, chronic disease (if any) and your story of "
+"choosing IVF in this field and share with us."
+msgstr ""
+"Lütfen yaşınızı, kilonuzu, kronik hastalığınızı (varsa) ve tüp bebek tercih "
+"hikayenizi bu alana yazıp bizimle paylaşın."
+
+#: templates/components/forms/first-step-form.html:77
+msgid "START YOUR JOURNEY"
+msgstr "GÖNDER"
+
+#: templates/components/forms/home_contact_form.html:11
+msgid "First step form for IVF"
+msgstr "Tüp Bebek için İlk Adım Formu"
+
+#: templates/components/forms/home_contact_form.html:73
+msgid "SEND NOW"
+msgstr "GÖNDER"
+
+#: templates/components/home/about.html:13
+msgid "ABOUT US"
+msgstr "HAKKIMIZDA"
+
+#: templates/components/home/about.html:16
+msgid "We are with you from the beginning to the end of your IVF Journey!"
+msgstr "Tüp Bebek yolculuğunuzun başından sonuna kadar sizinleyiz!"
+
+#: templates/components/home/about.html:20
+msgid ""
+"It might be as simple as not being sure how long the first appointment will "
+"take, whether it’s ok for you to bring along a partner or a friend, or how "
+"much of a financial commitment you’ll need to make up front. If you’re "
+"considering fertility treatment then you’ll have a lot of questions – "
+"ranging from weighing up whether it’s the right option for you at all, "
+"through to wondering how easy it will be to navigate the logistics of the "
+"treatment process, and each one is valid."
+msgstr ""
+"İlk randevu ne kadar sürecek? Yanımda eşim ya da arkadaşımı getirmeli miyim? "
+"Ne kadarlık bir bütçe ayırmalıyım? Doğurganlık tedavisi planlıyorsanız, "
+"bunun sizin için doğru seçenek olup olmadığından, tedavi sürecinin "
+"lojistiğine kadar çok sayıda sorunuz\n"
+"olabilir ve hepsi de mantıklıdır. "
+
+#: templates/components/home/about.html:25
+msgid ""
+"Because we know this can be an emotional time, we do our best to put you in "
+"control and give you all the information you need at every stage."
+msgstr ""
+"Bu sürecin ne kadar duygusal olduğunu biliyoruz, bu nedenle kontrolü size "
+"veriyor ve tedavi sürecinin her aşamasında ihtiyaç duyduğunuz tüm "
+"bilgilendirmeyi yapıyoruz. "
+
+#: templates/components/home/about.html:30
+msgid ""
+"Here, we’re going to walk through what you can expect from the first time "
+"you contact us, to the end of your treatment."
+msgstr ""
+"Bu bölümde, bizimle ilk iletişime geçtiğiniz andan tedavinizin sonuna "
+"kadarki süreci detayları ile anlatacağız."
+
+#: templates/components/home/blog.html:16
+msgid "BLOG"
+msgstr "BLOG"
+
+#: templates/components/home/blog.html:20
+msgid "Latest News About IVF and More"
+msgstr "Tüp Bebek Konusunda Güncel Bilgiler ve Daha Fazlası"
+
+#: templates/components/home/blog.html:31
+msgid "VIEW ALL BLOG"
+msgstr "TÜM BLOG İÇERİKLERİ"
+
+#: templates/components/home/ivf-experience.html:15
+#: templates/page/experience.html:27
+msgid "IVF EXPERIENCE"
+msgstr "TÜP BEBEK DENEYİMİ"
+
+#: templates/components/home/ivf-experience.html:20
+#: templates/page/experience.html:31
+msgid "Thank you for sharing your IVF Experience with us"
+msgstr "Tüp Bebek deneyiminizi bizimle paylaştığınız için teşekkürler."
+
+#: templates/components/home/ivf-experience.html:27
+#: templates/page/experience.html:38
+msgid ""
+"Every patient is put on the best possible treatment plan for the highest "
+"chance of success. That process starts with our thoughtful and thorough "
+"screening, which is focused on understanding you and your fertility health. "
+"“It’s how we make the impossible, possible.”"
+msgstr ""
+"Hastalarımıza, en yüksek başarı şansı için mümkün olan en uygun tedavi "
+"yöntemlerini planlıyoruz. Bu süreci, sizi ve doğurganlık sağlığınızı "
+"değerlendiren, size özel kapsamlı taramalarımızla ele alıyoruz. \"Bu sayede "
+"imkansızı, mümkün kılıyoruz.\""
+
+#: templates/components/home/ivf-journey.html:14
+msgid "IVF JOURNEY WITH US"
+msgstr "BİZİMLE TÜP BEBEK DENEYİMİ"
+
+#: templates/components/home/ivf-journey.html:49
+#: templates/components/services/service-item.html:19
+msgid "Learn More"
+msgstr "Detaylı Bilgi"
+
+#: templates/components/home/ivf-services.html:15
+#: templates/page/services.html:30
+msgid "Is there a specific issue you would like us to help you with?"
+msgstr "Yardımcı olmamızı istediğiniz özel bir konu var mı?"
+
+#: templates/components/home/patient-comments.html:15
+msgid "THANK YOU FOR CHOOSING US"
+msgstr "BİZİ TERCİH ETTİĞİNİZ İÇİN TEŞEKKÜRLER"
+
+#: templates/components/home/pricing-item.html:24
+msgid "GET PRICE"
+msgstr "FİYAT AL"
+
+#: templates/components/home/pricing.html:17
+msgid "CREATE YOUR PLAN NOW"
+msgstr "ŞİMDİ PLANINIZI OLUŞTURUN"
+
+#: templates/components/home/pricing.html:21
+msgid "Which treatment plan is best for you?"
+msgstr "Sizin tercihiniz hangi plan?"
+
+#: templates/components/home/slider.html:34
+msgid "More Information"
+msgstr "Daha Fazla Bilgi"
+
+#: templates/components/recaptcha/recaptcha-warning.html:4
+msgid ""
+"This site is protected by reCAPTCHA and the Google <a href=\"https://"
+"policies.google.com/privacy\">Privacy Policy</a> and <a href=\"https://"
+"policies.google.com/terms\">Terms of Service</a> apply."
+msgstr ""
+
+#: templates/page/contact.html:29
+msgid "Call Now"
+msgstr "Bizi Arayın"
+
+#: templates/page/contact.html:63
+msgid "Email Us"
+msgstr "Bize Yazın"
+
+#: templates/page/experience.html:55
+msgid "All"
+msgstr "Tümü"
+
+#: utils/models.py:16
+msgid "Banner Title"
+msgstr ""
+
+#: utils/models.py:17
+msgid "Banner Description"
+msgstr ""
+
+#: utils/models.py:19
+msgid "Banner Image"
+msgstr ""
+
+#: utils/models.py:20
+msgid "Banner Overlay"
+msgstr ""
+
+#: utils/recaptcha.py:20
+msgid "Recaptcha doğrulaması başarısız! "
+msgstr "Recaptcha doğrulaması başarısız!"
+
+#: utils/recaptcha.py:34
+msgid "Recaptcha doğrulaması başarısız!"
+msgstr "Recaptcha doğrulaması başarısız!"
+
+#: utils/views.py:116 utils/views.py:126
+msgid "An error occurred while sending your message!"
+msgstr ""
+"Mesajınız gönderilirken bir hata oluştu! Lütfen daha sonra tekrar deneyin."
+
+#: utils/views.py:121
+msgid ""
+"Your message has been sent successfully! We will get back to you as soon as "
+"possible"
+msgstr "Mesajınız başarıyla gönderildi! En kısa süre içinde size ulaşacağız. "
+
+#~ msgid "From Our Dear Patients"
+#~ msgstr "Hedefimiz “yeni bir hayata giden yolda size rehberlik etmektir.”"
+
+#~ msgid "Consultation and check-ups"
+#~ msgstr "Konsültasyon ve Kontroller"
