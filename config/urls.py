@@ -6,6 +6,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib.sitemaps.views import sitemap
 from config.sitemaps import sitemaps
 from django.views.static import serve
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path("jet/", include("jet.urls", "jet")),  # Django JET URLS
@@ -30,7 +31,13 @@ if not settings.DEBUG:
         re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     ]
 
+# i18n patterns - handles /en/, /tr/, /de/
 urlpatterns += i18n_patterns(
     path("", include("page.urls")),
     prefix_default_language=True  # Always use /en/ for English (default language)
+)
+
+# Redirect root / to /en/ (added AFTER i18n_patterns to avoid conflict)
+urlpatterns.append(
+    path('', RedirectView.as_view(url='/en/', permanent=False))
 )
