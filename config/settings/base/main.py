@@ -122,6 +122,11 @@ LANGUAGES = (
     ("de", _("German")),
 )
 
+# Always show language prefix in URL, even for default language (English)
+# This ensures /en/ is used instead of just /
+from django.conf.urls.i18n import i18n_patterns
+# Note: We'll configure this in urls.py
+
 LANGUAGE_SESSION_KEY = "language"
 
 ADMIN_URL = env("ADMIN_URL", default="admin/")
