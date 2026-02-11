@@ -94,7 +94,5 @@ db.sqlite3
 # Pycharm Files ##
 .idea/
 
-media/
 
-public/
 node_modules/
