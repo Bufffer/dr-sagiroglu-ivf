@@ -6,12 +6,8 @@ from django.conf.urls.i18n import i18n_patterns
 from django.contrib.sitemaps.views import sitemap
 from config.sitemaps import sitemaps
 from django.views.static import serve
-from django.views.generic import RedirectView
 
 urlpatterns = [
-    # Redirect root to English homepage
-    path('', RedirectView.as_view(url='/en/', permanent=False)),
-    
     path("jet/", include("jet.urls", "jet")),  # Django JET URLS
     path("jet/dashboard/", include("jet.dashboard.urls", namespace="jet-dashboard")),
     path("ckeditor/", include("ckeditor_uploader.urls")),
