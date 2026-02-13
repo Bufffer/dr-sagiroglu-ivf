@@ -19,8 +19,6 @@ urlpatterns = [
     path(_("contact/"), views.ContactPage.as_view(), name="contact"),
     path(_("gdpr/"), views.GDPRPage.as_view(), name="gdpr"),
     path(_("privacy/"), views.PrivacyPage.as_view(), name="privacy"),
-    path(_("plan/<pk>/"), views.PricingPlanDetailPage.as_view(), name="pricing_plan"),
-    path(_("pricing/"), views.PricingPage.as_view(), name="pricing"),
     path(
         "handle-contact-form/",
         views.HomeContactFormView.as_view(),

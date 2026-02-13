@@ -1,7 +1,6 @@
 {% load static %}
 {% load i18n %}
 {% load services %}
-{% load pricing %}
 
 
 <header class="rr-header-height ">
@@ -91,25 +90,7 @@
                                         <li><a href="{% url 'how_it_works' %}">{% translate 'Plan Your Journey' %}</a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li class="has-dropdown">
-                                    <a href="#">
-                                        {% translate 'Plans and Pricing' %}
-                                        <i class="fa-solid fa-caret-down"></i>
-                                    </a>
-                                    <ul class="submenu rr-submenu">
-                                        {% get_pricing as pricing_plans %}
-                                        {% for plan in pricing_plans %}
-                                        <li>
-                                            <a href="{{plan.get_absolute_url}}">{{plan.name}}</a>
-                                        </li>
-                                        {% endfor %}
-                                        <li>
-                                            <a href="{% url 'pricing' %}">{% translate "TREATMENT FEES" %}</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="{% url 'blog_list' %}">{% translate 'Blog' %}</a></li>
+                                </li>                                \u003cli\u003e\u003ca href="{% url 'blog_list' %}">{% translate 'Blog' %}</a></li>
                                 <li><a href="{% url 'contact' %}">{% translate 'Contact' %}</a></li>
                             </ul>
                         </nav>
