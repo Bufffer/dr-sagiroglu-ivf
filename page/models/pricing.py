@@ -30,7 +30,8 @@ class PricingPlan(TranslatableModel, SEOStarterModel, BannerStarterModel):
         ordering = ("order",)
 
     def get_absolute_url(self):
-        return reverse(f"pricing_plan", args=(self.pk,))
+        # Pricing plan URLs removed from site
+        return "#"
 
 
 class PricingPlanFeature(TranslatableModel):
